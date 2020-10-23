@@ -1,9 +1,12 @@
+
 import UIKit
 import Coordinators
 
 final class ReviewListViewController: UIViewController {
     
     // MARK: - Properties
+    private let viewSource = ReviewListView()
+    
     private let viewModel: ReviewListViewModel
     weak var coordinator: ReviewListCoordinatorProtocol?
     
@@ -19,8 +22,19 @@ final class ReviewListViewController: UIViewController {
     }
     
     // MARK: - Lifecycle
+    override func loadView() {
+        view = viewSource
+        view.backgroundColor = .white
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        title = "Review List"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .always
+    }
 }
-
 
 // MARK: - UIKit Preview
 #if DEBUG

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		199EFC342543A0A200D73CAA /* UIKitHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 199EFC332543A0A200D73CAA /* UIKitHelper */; };
 		19CA3BAE2542E3D000BBF912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CA3BAD2542E3D000BBF912 /* AppDelegate.swift */; };
 		19CA3BB72542E3D000BBF912 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19CA3BB62542E3D000BBF912 /* Assets.xcassets */; };
 		19CA3BBA2542E3D000BBF912 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CA3BB82542E3D000BBF912 /* LaunchScreen.storyboard */; };
@@ -36,6 +37,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19DC6EC925430703000F84AA /* ReviewList in Frameworks */,
+				199EFC342543A0A200D73CAA /* UIKitHelper in Frameworks */,
 				19DC6ECC25430713000F84AA /* AppstoreAPILive in Frameworks */,
 				19CA3BD92542EAE900BBF912 /* Coordinators in Frameworks */,
 			);
@@ -137,6 +139,7 @@
 				19CA3BD82542EAE900BBF912 /* Coordinators */,
 				19DC6EC825430703000F84AA /* ReviewList */,
 				19DC6ECB25430713000F84AA /* AppstoreAPILive */,
+				199EFC332543A0A200D73CAA /* UIKitHelper */,
 			);
 			productName = ReviewApp;
 			productReference = 19CA3BAA2542E3D000BBF912 /* ReviewApp.app */;
@@ -388,6 +391,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		199EFC332543A0A200D73CAA /* UIKitHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIKitHelper;
+		};
 		19CA3BD82542EAE900BBF912 /* Coordinators */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Coordinators;
