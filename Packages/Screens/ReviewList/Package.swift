@@ -13,13 +13,17 @@ let package = Package(
             targets: ["ReviewList"]),
     ],
     dependencies: [
-        .package(path: "AppstoreAPI")
+        .package(path: "AppstoreAPI"),
+        .package(path: "Coordinators"),
+        .package(path: "UIKitHelper")
     ],
     targets: [
         .target(
             name: "ReviewList",
             dependencies: [
-                "AppstoreAPI"
+                "AppstoreAPI",
+                "Coordinators",
+                "UIKitHelper"
             ]),
         .testTarget(
             name: "ReviewListTests",
