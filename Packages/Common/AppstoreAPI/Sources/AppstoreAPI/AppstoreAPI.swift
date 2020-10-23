@@ -1,12 +1,12 @@
 import Foundation
 
 public struct AppstoreAPI {
-    public typealias Completion<Model> = (Result<Model, AppStoreApiError>) -> Void
+    public typealias Completion<Model> = (Result<Model, AppstoreAPIError>) -> Void
     
-    public var reviewList: (Completion<[Review]>) -> Void
+    public var reviewList: (@escaping Completion<[Review]>) -> Void
     
     public init(
-        reviewList: @escaping (Completion<[Review]>) -> Void
+        reviewList: @escaping (@escaping Completion<[Review]>) -> Void
     ) {
         self.reviewList = reviewList
     }
