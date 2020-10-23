@@ -13,6 +13,7 @@
 		19CA3BD92542EAE900BBF912 /* Coordinators in Frameworks */ = {isa = PBXBuildFile; productRef = 19CA3BD82542EAE900BBF912 /* Coordinators */; };
 		19DC6EC925430703000F84AA /* ReviewList in Frameworks */ = {isa = PBXBuildFile; productRef = 19DC6EC825430703000F84AA /* ReviewList */; };
 		19DC6ECC25430713000F84AA /* AppstoreAPILive in Frameworks */ = {isa = PBXBuildFile; productRef = 19DC6ECB25430713000F84AA /* AppstoreAPILive */; };
+		19DC6EE525439BCC000F84AA /* ReviewListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC6EE425439BCC000F84AA /* ReviewListCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,8 @@
 		19DC6EC02543006B000F84AA /* NetworkCore */ = {isa = PBXFileReference; lastKnownFileType = folder; path = NetworkCore; sourceTree = "<group>"; };
 		19DC6EC325430203000F84AA /* AppstoreAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppstoreAPI; sourceTree = "<group>"; };
 		19DC6EC62543060C000F84AA /* ReviewList */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReviewList; sourceTree = "<group>"; };
+		19DC6EE425439BCC000F84AA /* ReviewListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListCoordinator.swift; sourceTree = "<group>"; };
+		19DC6EE825439F3F000F84AA /* UIKitHelper */ = {isa = PBXFileReference; lastKnownFileType = folder; path = UIKitHelper; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +67,9 @@
 			children = (
 				19CA3BAD2542E3D000BBF912 /* AppDelegate.swift */,
 				19CA3BB62542E3D000BBF912 /* Assets.xcassets */,
-				19CA3BB82542E3D000BBF912 /* LaunchScreen.storyboard */,
+				19DC6EE325439B94000F84AA /* Coordinators */,
 				19CA3BBB2542E3D000BBF912 /* Info.plist */,
+				19CA3BB82542E3D000BBF912 /* LaunchScreen.storyboard */,
 			);
 			path = ReviewApp;
 			sourceTree = "<group>";
@@ -89,6 +93,7 @@
 		19CA3BCE2542E9E800BBF912 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				19DC6EE825439F3F000F84AA /* UIKitHelper */,
 				19DC6EC325430203000F84AA /* AppstoreAPI */,
 				19CA3BD62542EABA00BBF912 /* Coordinators */,
 				19DC6EC02543006B000F84AA /* NetworkCore */,
@@ -102,6 +107,14 @@
 				19DC6EC62543060C000F84AA /* ReviewList */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		19DC6EE325439B94000F84AA /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				19DC6EE425439BCC000F84AA /* ReviewListCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19DC6EE525439BCC000F84AA /* ReviewListCoordinator.swift in Sources */,
 				19CA3BAE2542E3D000BBF912 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

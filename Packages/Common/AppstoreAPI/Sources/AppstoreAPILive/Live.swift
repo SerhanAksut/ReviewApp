@@ -3,6 +3,7 @@ import Foundation
 import NetworkCore
 import AppstoreAPI
 
+// MARK: - Live
 public extension AppstoreAPI {
     static let live = Self(
         reviewList: { completion in
@@ -13,12 +14,13 @@ public extension AppstoreAPI {
     )
 }
 
+// MARK: - Headers
 private let requestLoader = RequestLoader(
     baseURL: URL(string: "https://itunes.apple.com/")!,
     standardHeaders: [:]
 )
 
-// MARK: - Internal Helpers
+// MARK: - Error Mapping
 private func convertError(_ error: Error) -> AppstoreAPIError {
     if let appStoreApiError = error as? AppstoreAPIError {
         return appStoreApiError
