@@ -4,7 +4,7 @@ import NetworkCore
 import AppstoreAPI
 
 // MARK: - Live
-public extension AppstoreAPI {
+public extension APIClient {
     static let live = Self(
         reviewList: { completion in
             requestLoader.load(request: .reviewList) { result in
@@ -21,8 +21,8 @@ private let requestLoader = RequestLoader(
 )
 
 // MARK: - Error Mapping
-private func convertError(_ error: Error) -> AppstoreAPIError {
-    if let appStoreApiError = error as? AppstoreAPIError {
+private func convertError(_ error: Error) -> APIError {
+    if let appStoreApiError = error as? APIError {
         return appStoreApiError
     }
     if let networkError = error as? NetworkError {

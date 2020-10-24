@@ -4,18 +4,18 @@
 import PackageDescription
 
 let package = Package(
-    name: "UIKitHelper",
+    name: "UIKitPreview",
     platforms: [
         .iOS(.v13)
     ],
     products: [
         .library(
-            name: "UIKitHelper",
-            targets: ["UIKitHelper"]),
+            name: "UIKitPreview",
+            targets: ["UIKitPreview"]),
     ],
     targets: [
         .target(
-            name: "UIKitHelper",
+            name: "UIKitPreview",
             dependencies: []),
     ]
 )

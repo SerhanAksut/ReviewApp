@@ -1,11 +1,11 @@
 
-public enum AppstoreAPIError: Error {
+public enum APIError: Error {
     case url(Error)
     case decoding(Error)
     case noConnection
     case unknown
     
-    public var message: String? {
+    public var message: String {
         switch self {
         case .url, .decoding, .unknown:
             return Constants.standardMessage

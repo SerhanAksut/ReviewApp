@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		199EFC342543A0A200D73CAA /* UIKitHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 199EFC332543A0A200D73CAA /* UIKitHelper */; };
 		19CA3BAE2542E3D000BBF912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CA3BAD2542E3D000BBF912 /* AppDelegate.swift */; };
 		19CA3BB72542E3D000BBF912 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19CA3BB62542E3D000BBF912 /* Assets.xcassets */; };
 		19CA3BBA2542E3D000BBF912 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CA3BB82542E3D000BBF912 /* LaunchScreen.storyboard */; };
-		19CA3BD92542EAE900BBF912 /* Coordinators in Frameworks */ = {isa = PBXBuildFile; productRef = 19CA3BD82542EAE900BBF912 /* Coordinators */; };
-		19DC6EC925430703000F84AA /* ReviewList in Frameworks */ = {isa = PBXBuildFile; productRef = 19DC6EC825430703000F84AA /* ReviewList */; };
-		19DC6ECC25430713000F84AA /* AppstoreAPILive in Frameworks */ = {isa = PBXBuildFile; productRef = 19DC6ECB25430713000F84AA /* AppstoreAPILive */; };
 		19DC6EE525439BCC000F84AA /* ReviewListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC6EE425439BCC000F84AA /* ReviewListCoordinator.swift */; };
+		19E66D93254422B900346353 /* AppstoreAPILive in Frameworks */ = {isa = PBXBuildFile; productRef = 19E66D92254422B900346353 /* AppstoreAPILive */; };
+		19E66D95254422B900346353 /* Coordinators in Frameworks */ = {isa = PBXBuildFile; productRef = 19E66D94254422B900346353 /* Coordinators */; };
+		19E66D97254422B900346353 /* ReviewList in Frameworks */ = {isa = PBXBuildFile; productRef = 19E66D96254422B900346353 /* ReviewList */; };
+		19E66D99254422B900346353 /* UIKitHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 19E66D98254422B900346353 /* UIKitHelper */; };
+		19E66D9B254422B900346353 /* UIKitPreview in Frameworks */ = {isa = PBXBuildFile; productRef = 19E66D9A254422B900346353 /* UIKitPreview */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		19DC6EC62543060C000F84AA /* ReviewList */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReviewList; sourceTree = "<group>"; };
 		19DC6EE425439BCC000F84AA /* ReviewListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListCoordinator.swift; sourceTree = "<group>"; };
 		19DC6EE825439F3F000F84AA /* UIKitHelper */ = {isa = PBXFileReference; lastKnownFileType = folder; path = UIKitHelper; sourceTree = "<group>"; };
+		19E66D882544208A00346353 /* UIKitPreview */ = {isa = PBXFileReference; lastKnownFileType = folder; path = UIKitPreview; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,10 +38,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19DC6EC925430703000F84AA /* ReviewList in Frameworks */,
-				199EFC342543A0A200D73CAA /* UIKitHelper in Frameworks */,
-				19DC6ECC25430713000F84AA /* AppstoreAPILive in Frameworks */,
-				19CA3BD92542EAE900BBF912 /* Coordinators in Frameworks */,
+				19E66D97254422B900346353 /* ReviewList in Frameworks */,
+				19E66D99254422B900346353 /* UIKitHelper in Frameworks */,
+				19E66D93254422B900346353 /* AppstoreAPILive in Frameworks */,
+				19E66D9B254422B900346353 /* UIKitPreview in Frameworks */,
+				19E66D95254422B900346353 /* Coordinators in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,10 +98,11 @@
 		19CA3BCE2542E9E800BBF912 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				19DC6EE825439F3F000F84AA /* UIKitHelper */,
 				19DC6EC325430203000F84AA /* AppstoreAPI */,
 				19CA3BD62542EABA00BBF912 /* Coordinators */,
 				19DC6EC02543006B000F84AA /* NetworkCore */,
+				19DC6EE825439F3F000F84AA /* UIKitHelper */,
+				19E66D882544208A00346353 /* UIKitPreview */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -136,10 +140,11 @@
 			);
 			name = ReviewApp;
 			packageProductDependencies = (
-				19CA3BD82542EAE900BBF912 /* Coordinators */,
-				19DC6EC825430703000F84AA /* ReviewList */,
-				19DC6ECB25430713000F84AA /* AppstoreAPILive */,
-				199EFC332543A0A200D73CAA /* UIKitHelper */,
+				19E66D92254422B900346353 /* AppstoreAPILive */,
+				19E66D94254422B900346353 /* Coordinators */,
+				19E66D96254422B900346353 /* ReviewList */,
+				19E66D98254422B900346353 /* UIKitHelper */,
+				19E66D9A254422B900346353 /* UIKitPreview */,
 			);
 			productName = ReviewApp;
 			productReference = 19CA3BAA2542E3D000BBF912 /* ReviewApp.app */;
@@ -336,7 +341,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ReviewApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -355,7 +360,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ReviewApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -391,21 +396,25 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		199EFC332543A0A200D73CAA /* UIKitHelper */ = {
+		19E66D92254422B900346353 /* AppstoreAPILive */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = UIKitHelper;
+			productName = AppstoreAPILive;
 		};
-		19CA3BD82542EAE900BBF912 /* Coordinators */ = {
+		19E66D94254422B900346353 /* Coordinators */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Coordinators;
 		};
-		19DC6EC825430703000F84AA /* ReviewList */ = {
+		19E66D96254422B900346353 /* ReviewList */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ReviewList;
 		};
-		19DC6ECB25430713000F84AA /* AppstoreAPILive */ = {
+		19E66D98254422B900346353 /* UIKitHelper */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = AppstoreAPILive;
+			productName = UIKitHelper;
+		};
+		19E66D9A254422B900346353 /* UIKitPreview */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIKitPreview;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

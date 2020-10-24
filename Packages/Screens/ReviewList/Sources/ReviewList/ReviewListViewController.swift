@@ -36,15 +36,45 @@ final class ReviewListViewController: UIViewController {
     }
 }
 
+// MARK: - ReviewListViewModel Output
+extension ReviewListViewController: ReviewListViewModelOutput {
+    func displayLoading() {
+        // TODO: Show Loading
+    }
+    
+    func hideLoading() {
+        // TODO: Hide Loading
+    }
+    
+    func reloadUI(with reviews: [Review]) {
+        // TODO: Reload UI
+    }
+    
+    func displayError(with message: String) {
+        // TODO: Show Error Alert
+    }
+    
+    func showReviewDetail(with reviewID: String) {
+        // TODO: Navigate to Review Detail
+    }
+}
+
 // MARK: - UIKit Preview
 #if DEBUG
 import SwiftUI
+import UIKitPreview
 import AppstoreAPI
 
 struct ReviewListViewController_Preview: PreviewProvider {
     @available(iOS 13.0.0, *)
     static var previews: some View {
-        Text("Review List")
+        UIViewControllerPreview {
+            ReviewListBuilder.build(
+                apiClient: .delayed(client: .error)
+            )
+        }
+        .colorScheme(.dark)
+        .edgesIgnoringSafeArea(.all)
     }
 }
 #endif

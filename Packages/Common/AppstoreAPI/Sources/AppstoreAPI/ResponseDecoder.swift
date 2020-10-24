@@ -15,7 +15,7 @@ public func decode<Model>(
         let model = try decoder.decode(Model.self, from: data)
         return model
     } catch {
-        throw AppstoreAPIError.decoding(error)
+        throw APIError.decoding(error)
     }
 }
 

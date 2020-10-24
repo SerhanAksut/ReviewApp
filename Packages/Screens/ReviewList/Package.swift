@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "ReviewList",
     platforms: [
-        .iOS(.v11)
+        .iOS(.v13)
     ],
     products: [
         .library(
@@ -15,7 +15,8 @@ let package = Package(
     dependencies: [
         .package(path: "AppstoreAPI"),
         .package(path: "Coordinators"),
-        .package(path: "UIKitHelper")
+        .package(path: "UIKitHelper"),
+        .package(path: "UIKitPreview")
     ],
     targets: [
         .target(
@@ -23,7 +24,8 @@ let package = Package(
             dependencies: [
                 "AppstoreAPI",
                 "Coordinators",
-                "UIKitHelper"
+                "UIKitHelper",
+                "UIKitPreview"
             ]),
         .testTarget(
             name: "ReviewListTests",

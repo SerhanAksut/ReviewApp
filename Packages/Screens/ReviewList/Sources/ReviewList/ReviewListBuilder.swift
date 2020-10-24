@@ -6,7 +6,7 @@ import AppstoreAPI
 public struct ReviewListBuilder {
     
     public static func build(
-        apiClient: AppstoreAPI,
+        apiClient: APIClient,
         coordinator: ReviewListCoordinatorProtocol? = nil
     ) -> UIViewController {
         let viewModel = ReviewListViewModel(apiClient: apiClient)
