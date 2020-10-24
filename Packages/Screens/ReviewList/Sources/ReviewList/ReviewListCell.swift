@@ -6,15 +6,11 @@ import AppstoreAPI
 final class ReviewListCell: UITableViewCell {
     
     // MARK: - Properties
-    private let ratingLabel = with(
-        makeLabel(font: .systemFont(ofSize: 18))
-    ) {
+    private let ratingLabel = with(makeLabel(font: .systemFont(ofSize: 18))) {
         $0.setContentHuggingPriority(.required, for: .horizontal)
         $0.setContentCompressionResistancePriority(.required, for: .horizontal)
     }
-    
     private let versionLabel = makeLabel(font: .italicSystemFont(ofSize: 15))
-    
     private let authorLabel = makeLabel(font: .systemFont(ofSize: 15))
     private let titleLabel = makeLabel(font: .boldSystemFont(ofSize: 16))
     private let contentLabel = makeLabel(font: .systemFont(ofSize: 14))
