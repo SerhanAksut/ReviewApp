@@ -1,9 +1,3 @@
-//
-//  AppDelegate.swift
-//  ReviewApp
-//
-//  Created by Serhan Aksut on 23.10.2020.
-//
 
 import UIKit
 

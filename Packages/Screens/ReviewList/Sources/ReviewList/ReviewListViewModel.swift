@@ -4,6 +4,8 @@ import AppstoreAPI
 // MARK: - IO
 protocol ReviewListViewModelInput {
     func loadReviewList()
+    var numberOfReview: Int { get }
+    func review(at index: Int) -> Review
     func didSelectReview(at index: Int)
 }
 
@@ -11,7 +13,7 @@ protocol ReviewListViewModelOutput: class {
     func displayLoading()
     func hideLoading()
     func reloadUI(with reviews: [Review])
-    func displayError(with message: String)
+    func displayError(title: String, message: String, buttonTitle: String)
     func showReviewDetail(with reviewID: String)
 }
 
@@ -48,6 +50,14 @@ extension ReviewListViewModel: ReviewListViewModelInput {
         }
     }
     
+    var numberOfReview: Int {
+        state.reviews.count
+    }
+    
+    func review(at index: Int) -> Review {
+        state.reviews[index]
+    }
+    
     func didSelectReview(at index: Int) {
         let review = state.reviews[index]
         output?.showReviewDetail(with: review.id)
@@ -57,7 +67,6 @@ extension ReviewListViewModel: ReviewListViewModelInput {
 // MARK: - Internal Helpers
 private extension ReviewListViewModel {
     func stateUpdated(_ newState: State) {
-        output?.reloadUI(with: [])
         switch newState {
         case .idle:
             break
@@ -68,7 +77,11 @@ private extension ReviewListViewModel {
             output?.hideLoading()
         case .error(let message):
             output?.hideLoading()
-            output?.displayError(with: message)
+            output?.displayError(
+                title: Constants.errorTitle,
+                message: message,
+                buttonTitle: Constants.errorAlertButtonTitle
+            )
         }
     }
 }
@@ -86,5 +99,10 @@ private extension ReviewListViewModel {
             guard case let .loaded(reviews) = self else { return [] }
             return reviews
         }
+    }
+    
+    enum Constants {
+        static let errorTitle = "Error"
+        static let errorAlertButtonTitle = "Ok"
     }
 }

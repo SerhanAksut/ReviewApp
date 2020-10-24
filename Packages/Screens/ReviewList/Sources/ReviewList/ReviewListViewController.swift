@@ -1,11 +1,17 @@
 
 import UIKit
+import UIKitHelper
 import Coordinators
 
-final class ReviewListViewController: UIViewController {
+private typealias Handlers = LoadingHandler & ErrorHandler
+
+final class ReviewListViewController: UIViewController, Handlers {
     
     // MARK: - Properties
-    private let viewSource = ReviewListView()
+    private lazy var viewSource = with(ReviewListView()) {
+        $0.tableView.dataSource = self
+        $0.tableView.delegate = self
+    }
     
     private let viewModel: ReviewListViewModel
     weak var coordinator: ReviewListCoordinatorProtocol?
@@ -36,26 +42,56 @@ final class ReviewListViewController: UIViewController {
     }
 }
 
+// MARK: - UITableView Datasource
+extension ReviewListViewController: UITableViewDataSource {
+    func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int
+    ) -> Int {
+        viewModel.numberOfReview
+    }
+    
+    func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
+        let cell: ReviewListCell = tableView.dequeue(at: indexPath)
+        let review = viewModel.review(at: indexPath.row)
+        cell.populate(with: review)
+        return cell
+    }
+}
+
+// MARK: - UITableView Delegate
+extension ReviewListViewController: UITableViewDelegate {
+    func tableView(
+        _ tableView: UITableView,
+        didSelectRowAt indexPath: IndexPath
+    ) {
+        viewModel.didSelectReview(at: indexPath.row)
+    }
+}
+
 // MARK: - ReviewListViewModel Output
 extension ReviewListViewController: ReviewListViewModelOutput {
     func displayLoading() {
-        // TODO: Show Loading
+        showLoading()
     }
     
     func hideLoading() {
-        // TODO: Hide Loading
+        removeLoading()
     }
     
     func reloadUI(with reviews: [Review]) {
-        // TODO: Reload UI
+        viewSource.tableView.reloadData()
     }
     
-    func displayError(with message: String) {
-        // TODO: Show Error Alert
+    func displayError(title: String, message: String, buttonTitle: String) {
+        showAlert(title: title, message: message, buttonTitle: buttonTitle)
     }
     
     func showReviewDetail(with reviewID: String) {
-        // TODO: Navigate to Review Detail
+        coordinator?.showReviewDetail(with: reviewID)
     }
 }
 
@@ -70,7 +106,7 @@ struct ReviewListViewController_Preview: PreviewProvider {
     static var previews: some View {
         UIViewControllerPreview {
             ReviewListBuilder.build(
-                apiClient: .delayed(client: .error)
+                apiClient: .happyPath
             )
         }
         .colorScheme(.dark)

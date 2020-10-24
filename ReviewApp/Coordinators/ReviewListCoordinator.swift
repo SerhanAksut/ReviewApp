@@ -11,7 +11,7 @@ final class ReviewListCoordinator: ReviewListCoordinatorProtocol {
         
     }
     
-    func showReviewDetail() {
+    func showReviewDetail(with reviewID: String) {
         
     }
     
