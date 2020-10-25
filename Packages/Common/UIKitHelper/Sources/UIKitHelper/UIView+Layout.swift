@@ -72,14 +72,14 @@ public extension UIView {
     /// - Returns: A collection of `NSLayoutConstraint`.
     @discardableResult
     func alignCenter(
-        xOffSet: CGFloat = .zero,
+        xOffset: CGFloat = .zero,
         yOffset: CGFloat = .zero
     ) -> [NSLayoutConstraint] {
         translatesAutoresizingMaskIntoConstraints = false
         let constraints = [
             centerXAnchor.constraint(
                 equalTo: superview!.centerXAnchor,
-                constant: xOffSet
+                constant: xOffset
             ),
             centerYAnchor.constraint(
                 equalTo: superview!.centerYAnchor,
@@ -87,6 +87,46 @@ public extension UIView {
             )
         ]
         return constraints
+    }
+    
+    @discardableResult
+    func alignLeading(offset: CGFloat = .zero) -> NSLayoutConstraint {
+        translatesAutoresizingMaskIntoConstraints = false
+        let constraint = leadingAnchor.constraint(
+            equalTo: superview!.leadingAnchor,
+            constant: offset
+        )
+        return constraint
+    }
+    
+    @discardableResult
+    func alignTrailing(offset: CGFloat = .zero) -> NSLayoutConstraint {
+        translatesAutoresizingMaskIntoConstraints = false
+        let constraint = trailingAnchor.constraint(
+            equalTo: superview!.trailingAnchor,
+            constant: -offset
+        )
+        return constraint
+    }
+    
+    @discardableResult
+    func alignTop(offset: CGFloat = .zero) -> NSLayoutConstraint {
+        translatesAutoresizingMaskIntoConstraints = false
+        let constraint = topAnchor.constraint(
+            equalTo: superview!.topAnchor,
+            constant: offset
+        )
+        return constraint
+    }
+    
+    @discardableResult
+    func alignBottom(offset: CGFloat = .zero) -> NSLayoutConstraint {
+        translatesAutoresizingMaskIntoConstraints = false
+        let constraint = bottomAnchor.constraint(
+            equalTo: superview!.bottomAnchor,
+            constant: -offset
+        )
+        return constraint
     }
 }
 
