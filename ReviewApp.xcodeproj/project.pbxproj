@@ -51,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19A065CF2545696200A5D545 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				19CA3BAD2542E3D000BBF912 /* AppDelegate.swift */,
+				19A065CA254565B600A5D545 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		19CA3BA12542E3D000BBF912 = {
 			isa = PBXGroup;
 			children = (
@@ -72,12 +81,11 @@
 		19CA3BAC2542E3D000BBF912 /* ReviewApp */ = {
 			isa = PBXGroup;
 			children = (
-				19CA3BAD2542E3D000BBF912 /* AppDelegate.swift */,
+				19A065CF2545696200A5D545 /* App */,
 				19CA3BB62542E3D000BBF912 /* Assets.xcassets */,
 				19DC6EE325439B94000F84AA /* Coordinators */,
 				19CA3BBB2542E3D000BBF912 /* Info.plist */,
 				19CA3BB82542E3D000BBF912 /* LaunchScreen.storyboard */,
-				19A065CA254565B600A5D545 /* SceneDelegate.swift */,
 			);
 			path = ReviewApp;
 			sourceTree = "<group>";
