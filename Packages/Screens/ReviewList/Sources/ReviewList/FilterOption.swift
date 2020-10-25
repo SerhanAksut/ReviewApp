@@ -42,10 +42,10 @@ enum FilterOption: Int, CaseIterable {
 
 // MARK: - Constants
 private enum Constants {
-    static let veryBad = "1 Star"
-    static let bad = "2 Stars"
-    static let allRight = "3 Stars"
-    static let good = "4 Stars"
-    static let veryGood = "5 Stars"
+    static let veryBad = "⭐️"
+    static let bad = "⭐️⭐️"
+    static let allRight = "⭐️⭐️⭐️"
+    static let good = "⭐️⭐️⭐️⭐️"
+    static let veryGood = "⭐️⭐️⭐️⭐️⭐️"
     static let noFilter = "Default"
 }

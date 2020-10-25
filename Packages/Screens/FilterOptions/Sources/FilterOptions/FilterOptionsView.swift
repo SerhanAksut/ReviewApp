@@ -10,10 +10,26 @@ protocol FilterOptionsViewDelegate: class {
 final class FilterOptionsView: UIView {
     
     // MARK: - Properties
-    private let vStack = UIStackView(arrangedSubviews: [])
+    private let titleLabel = makeLabel(
+        textAlignment: .center,
+        font: .boldSystemFont(ofSize: 17),
+        numberOfLines: 1,
+        text: Constants.title
+    )
+    
+    private lazy var vStack = with(
+        UIStackView(arrangedSubviews: [
+            titleLabel
+        ])
+    ) {
+        $0.axis = .vertical
+        $0.spacing = 16
+        $0.alignment = .fill
+        $0.distribution = .fill
+    }
     
     private let contentView = with(UIView()) {
-        $0.backgroundColor = .appBlackColor
+        $0.backgroundColor = .appWhiteColor
         $0.layer.cornerRadius = 8
         $0.layer.masksToBounds = true
     }
@@ -24,11 +40,12 @@ final class FilterOptionsView: UIView {
     init() {
         super.init(frame: .zero)
         
+        backgroundColor = .clear
         addSubview(contentView)
         contentView.addSubview(vStack)
         
         var constraints = [
-            vStack.alignFitEdges(),
+            vStack.alignFitEdges(insetedBy: 16),
             contentView.alignCenter()
         ]
         .flatMap { $0 }
@@ -65,8 +82,9 @@ extension FilterOptionsView {
 
 // MARK: - Actions
 extension FilterOptionsView {
-    @objc func didSelectOption(sender: UIView) {
-        delegate?.didSelectOption(at: sender.tag)
+    @objc func didSelectOption(sender: UITapGestureRecognizer) {
+        guard let tag = sender.view?.tag else { return }
+        delegate?.didSelectOption(at: tag)
     }
 }
 
@@ -74,14 +92,11 @@ extension FilterOptionsView {
 private final class FilterOptionItemView: UIView {
     
     // MARK: - Properties
-    private let optionNameLabel = with(UILabel()) {
-        $0.numberOfLines = 0
-        $0.textAlignment = .left
-        $0.textColor = .appBlackColor
-        $0.font = .systemFont(ofSize: 14, weight: .medium)
-        $0.setContentHuggingPriority(.required, for: .vertical)
-        $0.setContentCompressionResistancePriority(.required, for: .vertical)
-    }
+    private let optionNameLabel = makeLabel(
+        textAlignment: .left,
+        font: .systemFont(ofSize: 14),
+        numberOfLines: 0
+    )
     
     private let checkIcon = with(UIImageView()) {
         $0.contentMode = .right
@@ -107,13 +122,7 @@ private final class FilterOptionItemView: UIView {
         super.init(frame: .zero)
         
         addSubview(hStack)
-        hStack.alignEdges(
-            leading: 16,
-            trailing: 16,
-            top: 10,
-            bottom: 10
-        )
-        .activate()
+        hStack.alignFitEdges().activate()
     }
     
     required init?(coder: NSCoder) {
@@ -129,4 +138,27 @@ extension FilterOptionItemView {
             ? UIImage(named: "checked")
             : UIImage(named: "unchecked")
     }
+}
+
+// MARK: - Make Label
+private func makeLabel(
+    textAlignment: NSTextAlignment,
+    font: UIFont,
+    numberOfLines: Int,
+    text: String? = nil
+) -> UILabel {
+    with(UILabel()) {
+        $0.textAlignment = textAlignment
+        $0.textColor = .appBlackColor
+        $0.font = font
+        $0.numberOfLines = numberOfLines
+        $0.text = text
+        $0.setContentHuggingPriority(.required, for: .vertical)
+        $0.setContentCompressionResistancePriority(.required, for: .vertical)
+    }
+}
+
+// MARK: - Constants
+private enum Constants {
+    static let title = "Filter Options"
 }
