@@ -15,6 +15,9 @@ final class ReviewListCoordinator: ReviewListCoordinatorProtocol {
         let navigationController = UINavigationController(
             rootViewController: reviewList
         )
+        navigationController.navigationBar.barTintColor = .white
+        navigationController.navigationBar.isTranslucent = false
+        navigationController.navigationBar.tintColor = .black
         window.rootViewController = navigationController
         self.navigationController = navigationController
     }
@@ -23,7 +26,7 @@ final class ReviewListCoordinator: ReviewListCoordinatorProtocol {
         
     }
     
-    func showFilter() {
+    func showSortingOptions(_ selectedIndex: Int) {
         
     }
 }

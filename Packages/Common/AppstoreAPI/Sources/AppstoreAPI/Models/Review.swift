@@ -8,6 +8,8 @@ public struct Review: Equatable {
     public let title: String
     public let content: String
     public let version: String
+    public let voteSum: UInt
+    public let voteCount: UInt
 }
 
 // MARK: - Decodable
@@ -59,6 +61,22 @@ extension Review: Decodable {
             forKey: .versionContainer
         )
         version = try versionValueContainer.decode(String.self, forKey: .version)
+        
+        let voteSumContainer = try decoder.container(keyedBy: CodingKeys.VoteSumContainer.self)
+        let voteSumValueContainer = try voteSumContainer.nestedContainer(
+            keyedBy: CodingKeys.VoteSumContainer.VoteSumValueContainer.self,
+            forKey: .voteSumContainer
+        )
+        let voteSumText: String = try voteSumValueContainer.decode(String.self, forKey: .voteSum)
+        voteSum = UInt(voteSumText) ?? 0
+        
+        let voteCountContainer = try decoder.container(keyedBy: CodingKeys.VoteCountContainer.self)
+        let voteCountValueContainer = try voteCountContainer.nestedContainer(
+            keyedBy: CodingKeys.VoteCountContainer.VoteCountValueContainer.self,
+            forKey: .voteCountContainer
+        )
+        let voteCountText: String = try voteCountValueContainer.decode(String.self, forKey: .voteCount)
+        voteCount = UInt(voteCountText) ?? 0
     }
     
     private enum CodingKeys: CodingKey {
@@ -111,6 +129,22 @@ extension Review: Decodable {
             
             enum ContentValueContainer: String, CodingKey {
                 case content = "label"
+            }
+        }
+        
+        enum VoteSumContainer: String, CodingKey {
+            case voteSumContainer = "im:voteSum"
+            
+            enum VoteSumValueContainer: String, CodingKey {
+                case voteSum = "label"
+            }
+        }
+        
+        enum VoteCountContainer: String, CodingKey {
+            case voteCountContainer = "im:voteSum"
+            
+            enum VoteCountValueContainer: String, CodingKey {
+                case voteCount = "label"
             }
         }
     }

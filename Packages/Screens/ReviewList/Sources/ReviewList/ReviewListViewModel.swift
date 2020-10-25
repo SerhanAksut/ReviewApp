@@ -7,6 +7,8 @@ protocol ReviewListViewModelInput {
     var numberOfReview: Int { get }
     func review(at index: Int) -> Review
     func didSelectReview(at index: Int)
+    func didSelectSortingButton()
+    func sortingOptionSelected(at index: Int)
 }
 
 protocol ReviewListViewModelOutput: class {
@@ -15,6 +17,7 @@ protocol ReviewListViewModelOutput: class {
     func reloadUI(with reviews: [Review])
     func displayError(title: String, message: String, buttonTitle: String)
     func showReviewDetail(with reviewID: String)
+    func showSortingOptions(_ selectedIndex: Int)
 }
 
 final class ReviewListViewModel {
@@ -26,6 +29,12 @@ final class ReviewListViewModel {
     private var state: State = .idle {
         didSet {
             stateUpdated(state)
+        }
+    }
+    
+    private var currentOption: SortingOption = .helpful {
+        didSet {
+            optionChanged(currentOption)
         }
     }
     
@@ -62,6 +71,15 @@ extension ReviewListViewModel: ReviewListViewModelInput {
         let review = state.reviews[index]
         output?.showReviewDetail(with: review.id)
     }
+    
+    func didSelectSortingButton() {
+        output?.showSortingOptions(currentOption.rawValue)
+    }
+    
+    func sortingOptionSelected(at index: Int) {
+        guard let selectedOption = SortingOption(rawValue: index) else { return }
+        currentOption = selectedOption
+    }
 }
 
 // MARK: - Internal Helpers
@@ -82,6 +100,21 @@ private extension ReviewListViewModel {
                 message: message,
                 buttonTitle: Constants.errorAlertButtonTitle
             )
+        }
+    }
+    
+    func optionChanged(_ newOption: SortingOption) {
+        var reviews = state.reviews
+        switch newOption {
+        case .helpful:
+            reviews.sort(by: { $0.voteCount > $1.voteCount })
+            output?.reloadUI(with: reviews)
+        case .favourable:
+            reviews.sort(by: { $0.voteSum > $1.voteSum })
+            output?.reloadUI(with: reviews)
+        case .critical:
+            reviews.sort(by: { $0.rating < $1.rating })
+            output?.reloadUI(with: reviews)
         }
     }
 }

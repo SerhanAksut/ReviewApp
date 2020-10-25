@@ -42,6 +42,13 @@ final class ReviewListViewController: UIViewController, Handlers {
         title = "Review List"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .always
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: UIImage(named: "sorting"),
+            style: .plain,
+            target: self,
+            action: #selector(didSelectSortingButton)
+        )
     }
 }
 
@@ -96,6 +103,17 @@ extension ReviewListViewController: ReviewListViewModelOutput {
     
     func showReviewDetail(with reviewID: String) {
         coordinator?.showReviewDetail(with: reviewID)
+    }
+    
+    func showSortingOptions(_ selectedIndex: Int) {
+        coordinator?.showSortingOptions(selectedIndex)
+    }
+}
+
+// MARK: - Actions
+extension ReviewListViewController {
+    @objc func didSelectSortingButton() {
+        viewModel.didSelectSortingButton()
     }
 }
 

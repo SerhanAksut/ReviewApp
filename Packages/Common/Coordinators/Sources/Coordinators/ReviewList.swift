@@ -2,5 +2,5 @@
 public protocol ReviewListCoordinatorProtocol: class {
     
     func showReviewDetail(with reviewID: String)
-    func showFilter()
+    func showSortingOptions(_ selectedIndex: Int)
 }
