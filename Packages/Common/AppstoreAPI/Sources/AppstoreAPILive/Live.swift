@@ -10,7 +10,11 @@ public extension APIClient {
             DispatchQueue.global().async {
                 requestLoader.load(request: .reviewList) { result in
                     DispatchQueue.main.async {
-                        completion(result.mapError(convertError))
+                        completion(
+                            result
+                                .map { $0.reviews }
+                                .mapError(convertError)
+                        )
                     }
                 }
             }

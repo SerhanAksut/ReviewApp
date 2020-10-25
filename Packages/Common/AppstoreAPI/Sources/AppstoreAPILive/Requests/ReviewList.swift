@@ -2,8 +2,8 @@
 import NetworkCore
 import AppstoreAPI
 
-public extension Request where Response == [Review] {
-    static var reviewList: Request<[Review]> {
+public extension Request where Response == Feed {
+    static var reviewList: Request<Feed> {
         Request(
             path: "nl/rss/customerreviews/id=474495017/sortby=mostrecent/json",
             httpMethod: .get,

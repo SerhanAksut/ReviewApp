@@ -31,6 +31,9 @@ public extension RequestLoader {
                 let model = try request.decoder(data, request.decodingInfo)
                 completion(.success(model))
             } catch {
+                #if DEBUG
+                    print(error)
+                #endif
                 completion(.failure(error))
             }
         }
