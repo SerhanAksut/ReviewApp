@@ -7,8 +7,8 @@ protocol ReviewListViewModelInput {
     var numberOfReview: Int { get }
     func review(at index: Int) -> Review
     func didSelectReview(at index: Int)
-    func didSelectSortingButton()
-    func sortingOptionSelected(at index: Int)
+    func didSelectFilterButton()
+    func filterOptionSelected(at index: Int)
 }
 
 protocol ReviewListViewModelOutput: class {
@@ -17,7 +17,7 @@ protocol ReviewListViewModelOutput: class {
     func reloadUI(with reviews: [Review])
     func displayError(title: String, message: String, buttonTitle: String)
     func showReviewDetail(with reviewID: String)
-    func showSortingOptions(_ selectedIndex: Int)
+    func showFilterOptions(items: [String], selectedIndex: Int)
 }
 
 final class ReviewListViewModel {
@@ -32,7 +32,7 @@ final class ReviewListViewModel {
         }
     }
     
-    private var currentOption: SortingOption = .helpful {
+    private var currentOption: FilterOption = .noFilter {
         didSet {
             optionChanged(currentOption)
         }
@@ -72,12 +72,16 @@ extension ReviewListViewModel: ReviewListViewModelInput {
         output?.showReviewDetail(with: review.id)
     }
     
-    func didSelectSortingButton() {
-        output?.showSortingOptions(currentOption.rawValue)
+    func didSelectFilterButton() {
+        let items = FilterOption.allCases.map { $0.title }
+        output?.showFilterOptions(
+            items: items,
+            selectedIndex: currentOption.rawValue
+        )
     }
     
-    func sortingOptionSelected(at index: Int) {
-        guard let selectedOption = SortingOption(rawValue: index) else { return }
+    func filterOptionSelected(at index: Int) {
+        guard let selectedOption = FilterOption(rawValue: index) else { return }
         currentOption = selectedOption
     }
 }
@@ -103,18 +107,16 @@ private extension ReviewListViewModel {
         }
     }
     
-    func optionChanged(_ newOption: SortingOption) {
-        var reviews = state.reviews
-        switch newOption {
-        case .helpful:
-            reviews.sort(by: { $0.voteCount > $1.voteCount })
+    func optionChanged(_ newOption: FilterOption) {
+        let reviews = state.reviews
+        if case .noFilter = newOption {
             output?.reloadUI(with: reviews)
-        case .favourable:
-            reviews.sort(by: { $0.voteSum > $1.voteSum })
-            output?.reloadUI(with: reviews)
-        case .critical:
-            reviews.sort(by: { $0.rating < $1.rating })
-            output?.reloadUI(with: reviews)
+        } else {
+            guard let starCount = newOption.starCount else { return }
+            let updatedReviewList = reviews.filter {
+                $0.rating == starCount
+            }
+            output?.reloadUI(with: updatedReviewList)
         }
     }
 }

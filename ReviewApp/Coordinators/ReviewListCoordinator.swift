@@ -26,7 +26,7 @@ final class ReviewListCoordinator: ReviewListCoordinatorProtocol {
         
     }
     
-    func showSortingOptions(_ selectedIndex: Int) {
+    func showFilterOptions(items: [String], selectedIndex: Int) {
         
     }
 }

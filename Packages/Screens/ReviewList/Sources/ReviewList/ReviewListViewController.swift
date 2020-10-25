@@ -47,7 +47,7 @@ final class ReviewListViewController: UIViewController, Handlers {
             image: UIImage(named: "filter"),
             style: .plain,
             target: self,
-            action: #selector(didSelectSortingButton)
+            action: #selector(didSelectFilterButton)
         )
     }
 }
@@ -105,15 +105,18 @@ extension ReviewListViewController: ReviewListViewModelOutput {
         coordinator?.showReviewDetail(with: reviewID)
     }
     
-    func showSortingOptions(_ selectedIndex: Int) {
-        coordinator?.showSortingOptions(selectedIndex)
+    func showFilterOptions(items: [String], selectedIndex: Int) {
+        coordinator?.showFilterOptions(
+            items: items,
+            selectedIndex: selectedIndex
+        )
     }
 }
 
 // MARK: - Actions
 extension ReviewListViewController {
-    @objc func didSelectSortingButton() {
-        viewModel.didSelectSortingButton()
+    @objc func didSelectFilterButton() {
+        viewModel.didSelectFilterButton()
     }
 }
 
