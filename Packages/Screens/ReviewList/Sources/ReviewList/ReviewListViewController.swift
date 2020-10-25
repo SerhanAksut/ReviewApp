@@ -126,9 +126,11 @@ import AppstoreAPI
 struct ReviewListViewController_Preview: PreviewProvider {
     static var previews: some View {
         UIViewControllerPreview {
-            ReviewListBuilder.build(
+            let controller = ReviewListBuilder.build(
                 apiClient: .happyPath
             )
+            let navController = UINavigationController(rootViewController: controller)
+            return navController
         }
         .edgesIgnoringSafeArea(.all)
     }
