@@ -36,6 +36,9 @@ final class ReviewListViewController: UIViewController, Handlers {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel.output = self
+        viewModel.loadReviewList()
+        
         title = "Review List"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .always
@@ -69,6 +72,7 @@ extension ReviewListViewController: UITableViewDelegate {
         didSelectRowAt indexPath: IndexPath
     ) {
         viewModel.didSelectReview(at: indexPath.row)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
@@ -102,14 +106,12 @@ import UIKitPreview
 import AppstoreAPI
 
 struct ReviewListViewController_Preview: PreviewProvider {
-    @available(iOS 13.0.0, *)
     static var previews: some View {
         UIViewControllerPreview {
             ReviewListBuilder.build(
                 apiClient: .happyPath
             )
         }
-        .colorScheme(.dark)
         .edgesIgnoringSafeArea(.all)
     }
 }

@@ -12,7 +12,6 @@ public struct ReviewListBuilder {
         let viewModel = ReviewListViewModel(apiClient: apiClient)
         let controller = ReviewListViewController(viewModel: viewModel)
         controller.coordinator = coordinator
-        let navController = UINavigationController(rootViewController: controller)
-        return navController
+        return controller
     }
 }

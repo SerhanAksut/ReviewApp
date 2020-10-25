@@ -7,8 +7,12 @@ import AppstoreAPI
 public extension APIClient {
     static let live = Self(
         reviewList: { completion in
-            requestLoader.load(request: .reviewList) { result in
-                completion(result.mapError(convertError))
+            DispatchQueue.global().async {
+                requestLoader.load(request: .reviewList) { result in
+                    DispatchQueue.main.async {
+                        completion(result.mapError(convertError))
+                    }
+                }
             }
         }
     )
