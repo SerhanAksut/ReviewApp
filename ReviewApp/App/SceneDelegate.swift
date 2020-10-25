@@ -1,5 +1,6 @@
 
 import UIKit
+import UIKitHelper
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
@@ -13,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     ) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        window.backgroundColor = .white
+        window.backgroundColor = .appWhiteColor
         window.makeKeyAndVisible()
         reviewListCoordinator.start(window: window)
         

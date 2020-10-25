@@ -70,7 +70,7 @@ private func makeLabel(
     with(UILabel()) {
         $0.textAlignment = .left
         $0.numberOfLines = numberOfLines
-        $0.textColor = .black
+        $0.textColor = .appBlackColor
         $0.font = font
         $0.setContentHuggingPriority(.required, for: .vertical)
         $0.setContentCompressionResistancePriority(.required, for: .vertical)

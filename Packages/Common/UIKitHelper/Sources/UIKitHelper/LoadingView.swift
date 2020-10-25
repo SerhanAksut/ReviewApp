@@ -13,7 +13,7 @@ public final class LoadingView: UIView {
     init() {
         super.init(frame: .zero)
         
-        backgroundColor = UIColor.black.withAlphaComponent(0.3)
+        backgroundColor = UIColor.appBlackColor.withAlphaComponent(0.3)
         
         addSubview(indicator)
         indicator.alignCenter().activate()

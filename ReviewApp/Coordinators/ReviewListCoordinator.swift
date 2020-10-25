@@ -15,9 +15,9 @@ final class ReviewListCoordinator: ReviewListCoordinatorProtocol {
         let navigationController = UINavigationController(
             rootViewController: reviewList
         )
-        navigationController.navigationBar.barTintColor = .white
+        navigationController.navigationBar.barTintColor = .appWhiteColor
         navigationController.navigationBar.isTranslucent = false
-        navigationController.navigationBar.tintColor = .black
+        navigationController.navigationBar.tintColor = .appBlackColor
         window.rootViewController = navigationController
         self.navigationController = navigationController
     }

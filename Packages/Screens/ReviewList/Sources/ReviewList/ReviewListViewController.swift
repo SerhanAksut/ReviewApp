@@ -30,7 +30,7 @@ final class ReviewListViewController: UIViewController, Handlers {
     // MARK: - Lifecycle
     override func loadView() {
         view = viewSource
-        view.backgroundColor = .white
+        view.backgroundColor = .appWhiteColor
     }
     
     override func viewDidLoad() {
@@ -44,7 +44,7 @@ final class ReviewListViewController: UIViewController, Handlers {
         navigationItem.largeTitleDisplayMode = .always
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(
-            image: UIImage(named: "sorting"),
+            image: UIImage(named: "filter"),
             style: .plain,
             target: self,
             action: #selector(didSelectSortingButton)
@@ -132,6 +132,7 @@ struct ReviewListViewController_Preview: PreviewProvider {
             let navController = UINavigationController(rootViewController: controller)
             return navController
         }
+        .colorScheme(.dark)
         .edgesIgnoringSafeArea(.all)
     }
 }
