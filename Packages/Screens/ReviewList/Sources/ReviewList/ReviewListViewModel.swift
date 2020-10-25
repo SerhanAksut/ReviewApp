@@ -25,6 +25,7 @@ final class ReviewListViewModel {
     // MARK: - Properties
     private let apiClient: APIClient
     weak var output: ReviewListViewModelOutput?
+    private var allReviews: [Review] = []
     
     private var state: State = .idle {
         didSet {
@@ -52,6 +53,7 @@ extension ReviewListViewModel: ReviewListViewModelInput {
             guard let self = self else { return }
             switch result {
             case .success(let reviews):
+                self.allReviews = reviews
                 self.state = .loaded(reviews)
             case .failure(let error):
                 self.state = .error(error.message)
@@ -97,6 +99,8 @@ private extension ReviewListViewModel {
         case .loaded(let reviews):
             output?.reloadUI(with: reviews)
             output?.hideLoading()
+        case .filtered(let filteredReviewList):
+            output?.reloadUI(with: filteredReviewList)
         case .error(let message):
             output?.hideLoading()
             output?.displayError(
@@ -108,15 +112,14 @@ private extension ReviewListViewModel {
     }
     
     func optionChanged(_ newOption: FilterOption) {
-        let reviews = state.reviews
         if case .noFilter = newOption {
-            output?.reloadUI(with: reviews)
+            state = .loaded(allReviews)
         } else {
             guard let starCount = newOption.starCount else { return }
-            let updatedReviewList = reviews.filter {
+            let filteredReviewList = allReviews.filter {
                 $0.rating == starCount
             }
-            output?.reloadUI(with: updatedReviewList)
+            state = .filtered(filteredReviewList)
         }
     }
 }
@@ -128,11 +131,18 @@ private extension ReviewListViewModel {
         case idle
         case loading
         case loaded([Review])
+        case filtered([Review])
         case error(String)
         
         var reviews: [Review] {
-            guard case let .loaded(reviews) = self else { return [] }
-            return reviews
+            switch self {
+            case .loaded(let reviews):
+                return reviews
+            case .filtered(let filteredReviews):
+                return filteredReviews
+            default:
+                return []
+            }
         }
     }
     
