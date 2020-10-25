@@ -42,6 +42,7 @@ extension FilterOptionsViewController: FilterOptionsViewModelOutput {
     
     func close(with selectedIndex: Int?) {
         dependencies.completion(selectedIndex)
+        dismiss(animated: true)
     }
 }
 

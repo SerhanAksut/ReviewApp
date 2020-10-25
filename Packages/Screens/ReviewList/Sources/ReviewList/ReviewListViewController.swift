@@ -108,7 +108,11 @@ extension ReviewListViewController: ReviewListViewModelOutput {
     func showFilterOptions(items: [String], selectedIndex: Int) {
         coordinator?.showFilterOptions(
             items: items,
-            selectedIndex: selectedIndex
+            selectedIndex: selectedIndex,
+            completion: { [weak viewModel] selectedIndex in
+                guard let index = selectedIndex else { return }
+                viewModel?.filterOptionSelected(at: index)
+            }
         )
     }
 }

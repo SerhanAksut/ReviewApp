@@ -2,5 +2,9 @@
 public protocol ReviewListCoordinatorProtocol: class {
     
     func showReviewDetail(with reviewID: String)
-    func showFilterOptions(items: [String], selectedIndex: Int)
+    func showFilterOptions(
+        items: [String],
+        selectedIndex: Int?,
+        completion: @escaping (Int?) -> Void
+    )
 }
