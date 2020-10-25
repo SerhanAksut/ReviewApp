@@ -75,7 +75,7 @@ public extension UIView {
         xOffSet: CGFloat = .zero,
         yOffset: CGFloat = .zero
     ) -> [NSLayoutConstraint] {
-        translatesAutoresizingMaskIntoConstraints = true
+        translatesAutoresizingMaskIntoConstraints = false
         let constraints = [
             centerXAnchor.constraint(
                 equalTo: superview!.centerXAnchor,
