@@ -1,7 +1,8 @@
 
 import UIKit
+import UIKitHelper
 
-final class FilterOptionsViewController: UIViewController {
+final class FilterOptionsViewController: UIViewController, ErrorHandler {
     
     // MARK: - Properties
     private let viewSource = FilterOptionsView()
@@ -40,7 +41,12 @@ extension FilterOptionsViewController: FilterOptionsViewModelOutput {
         viewSource.populate(with: datasource)
     }
     
-    func close(with selectedIndex: Int?) {
+    func displayError(title: String, message: String, buttonTitle: String) {
+        viewSource.contentView.isHidden = true
+        showAlert(title: title, message: message, buttonTitle: buttonTitle)
+    }
+    
+    func close(with selectedIndex: Int) {
         dependencies.completion(selectedIndex)
         dismiss(animated: true)
     }

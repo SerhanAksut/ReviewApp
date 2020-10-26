@@ -28,7 +28,7 @@ final class FilterOptionsView: UIView {
         $0.distribution = .fill
     }
     
-    private let contentView = with(UIView()) {
+    let contentView = with(UIView()) {
         $0.backgroundColor = .appWhiteColor
         $0.layer.cornerRadius = 8
         $0.layer.masksToBounds = true

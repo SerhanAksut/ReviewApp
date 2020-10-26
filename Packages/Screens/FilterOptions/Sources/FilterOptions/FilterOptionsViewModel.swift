@@ -5,12 +5,12 @@ import Foundation
 protocol FilterOptionsViewModelInput {
     func loadOptionItems()
     func optionItemSelected(at index: Int)
-    func closeButtonTapped()
 }
 
 protocol FilterOptionsViewModelOutput: class {
     func loadUI(with datasource: [FilterOptionItemModel])
-    func close(with selectedIndex: Int?)
+    func displayError(title: String, message: String, buttonTitle: String)
+    func close(with selectedIndex: Int)
 }
 
 final class FilterOptionsViewModel {
@@ -30,22 +30,33 @@ final class FilterOptionsViewModel {
 // MARK: - FilterOptionsViewModel Input
 extension FilterOptionsViewModel: FilterOptionsViewModelInput {
     func loadOptionItems() {
-        let datasource = items
-            .enumerated()
-            .map { index, itemName in
-                FilterOptionItemModel(
-                    itemName: itemName,
-                    isChecked: index == selectedIndex
-                )
-            }
-        output?.loadUI(with: datasource)
+        if items.isEmpty {
+            output?.displayError(
+                title: Constants.errorTitle,
+                message: Constants.message,
+                buttonTitle: Constants.errorAlertButtonTitle
+            )
+        } else {
+            let datasource = items
+                .enumerated()
+                .map { index, itemName in
+                    FilterOptionItemModel(
+                        itemName: itemName,
+                        isChecked: index == selectedIndex
+                    )
+                }
+            output?.loadUI(with: datasource)
+        }
     }
     
     func optionItemSelected(at index: Int) {
         output?.close(with: index)
     }
-    
-    func closeButtonTapped() {
-        output?.close(with: nil)
-    }
+}
+
+// MARK: - Constants
+private enum Constants {
+    static let errorTitle = "Error"
+    static let message = "There is no option item."
+    static let errorAlertButtonTitle = "Ok"
 }
