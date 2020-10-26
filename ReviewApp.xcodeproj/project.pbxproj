@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		194234E72546DCCE0041016F /* SwiftKit in Frameworks */ = {isa = PBXBuildFile; productRef = 194234E62546DCCE0041016F /* SwiftKit */; };
 		19A065CB254565B600A5D545 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A065CA254565B600A5D545 /* SceneDelegate.swift */; };
 		19A065D82545FE0F00A5D545 /* FilterOptions in Frameworks */ = {isa = PBXBuildFile; productRef = 19A065D72545FE0F00A5D545 /* FilterOptions */; };
 		19CA3BAE2542E3D000BBF912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CA3BAD2542E3D000BBF912 /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		194234E42546DC870041016F /* SwiftKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SwiftKit; sourceTree = "<group>"; };
 		19A065CA254565B600A5D545 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		19A065D52545FDBE00A5D545 /* FilterOptions */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FilterOptions; sourceTree = "<group>"; };
 		19CA3BAA2542E3D000BBF912 /* ReviewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReviewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +49,7 @@
 				19E66D93254422B900346353 /* AppstoreAPILive in Frameworks */,
 				19A065D82545FE0F00A5D545 /* FilterOptions in Frameworks */,
 				19E66D9B254422B900346353 /* UIKitPreview in Frameworks */,
+				194234E72546DCCE0041016F /* SwiftKit in Frameworks */,
 				19E66D95254422B900346353 /* Coordinators in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,6 +118,7 @@
 				19DC6EC325430203000F84AA /* AppstoreAPI */,
 				19CA3BD62542EABA00BBF912 /* Coordinators */,
 				19DC6EC02543006B000F84AA /* NetworkCore */,
+				194234E42546DC870041016F /* SwiftKit */,
 				19DC6EE825439F3F000F84AA /* UIKitHelper */,
 				19E66D882544208A00346353 /* UIKitPreview */,
 			);
@@ -161,6 +165,7 @@
 				19E66D98254422B900346353 /* UIKitHelper */,
 				19E66D9A254422B900346353 /* UIKitPreview */,
 				19A065D72545FE0F00A5D545 /* FilterOptions */,
+				194234E62546DCCE0041016F /* SwiftKit */,
 			);
 			productName = ReviewApp;
 			productReference = 19CA3BAA2542E3D000BBF912 /* ReviewApp.app */;
@@ -415,6 +420,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		194234E62546DCCE0041016F /* SwiftKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftKit;
+		};
 		19A065D72545FE0F00A5D545 /* FilterOptions */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FilterOptions;

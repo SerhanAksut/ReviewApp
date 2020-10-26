@@ -40,8 +40,6 @@ final class ReviewListViewController: UIViewController, Handlers {
         viewModel.loadReviewList()
         
         title = "Review List"
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.largeTitleDisplayMode = .always
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(named: "filter"),
@@ -93,8 +91,8 @@ extension ReviewListViewController: ReviewListViewModelOutput {
         removeLoading()
     }
     
-    func reloadUI(with reviews: [Review]) {
-        viewSource.tableView.reloadData()
+    func reloadUI(tags: [String], reviews: [Review]) {
+        viewSource.reloadUI(tags: tags, reviews: reviews)
     }
     
     func displayError(title: String, message: String, buttonTitle: String) {
@@ -133,11 +131,11 @@ import AppstoreAPI
 struct ReviewListViewController_Preview: PreviewProvider {
     static var previews: some View {
         UIViewControllerPreview {
-            let controller = ReviewListBuilder.build(
-                apiClient: .happyPath
+            UINavigationController(
+                rootViewController: ReviewListBuilder.build(
+                    apiClient: .happyPath
+                )
             )
-            let navController = UINavigationController(rootViewController: controller)
-            return navController
         }
         .colorScheme(.dark)
         .edgesIgnoringSafeArea(.all)

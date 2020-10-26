@@ -1,5 +1,6 @@
 
 import AppstoreAPI
+import SwiftKit
 
 // MARK: - IO
 protocol ReviewListViewModelInput {
@@ -14,7 +15,7 @@ protocol ReviewListViewModelInput {
 protocol ReviewListViewModelOutput: class {
     func displayLoading()
     func hideLoading()
-    func reloadUI(with reviews: [Review])
+    func reloadUI(tags: [String], reviews: [Review])
     func displayError(title: String, message: String, buttonTitle: String)
     func showReviewDetail(with reviewID: String)
     func showFilterOptions(items: [String], selectedIndex: Int)
@@ -97,10 +98,14 @@ private extension ReviewListViewModel {
         case .loading:
             output?.displayLoading()
         case .loaded(let reviews):
-            output?.reloadUI(with: reviews)
+            output?.reloadUI(tags: [], reviews: reviews)
             output?.hideLoading()
-        case .filtered(let filteredReviewList):
-            output?.reloadUI(with: filteredReviewList)
+        case .filtered(let filteredReviews):
+            let topWords = filteredReviews
+                .map { $0.content }
+                .findTopWords(prefix: 3)
+            
+            output?.reloadUI(tags: topWords, reviews: filteredReviews)
         case .error(let message):
             output?.hideLoading()
             output?.displayError(
