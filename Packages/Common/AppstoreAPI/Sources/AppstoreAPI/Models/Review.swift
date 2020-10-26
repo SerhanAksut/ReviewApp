@@ -8,6 +8,22 @@ public struct Review: Equatable {
     public let title: String
     public let content: String
     public let version: String
+    
+    public init(
+        id: String,
+        author: String,
+        rating: UInt,
+        title: String,
+        content: String,
+        version: String
+    ) {
+        self.id = id
+        self.author = author
+        self.rating = rating
+        self.title = title
+        self.content = content
+        self.version = version
+    }
 }
 
 // MARK: - Decodable

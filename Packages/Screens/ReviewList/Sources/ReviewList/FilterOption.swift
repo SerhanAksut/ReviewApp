@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Filter options for the review list according to star count.
 enum FilterOption: Int, CaseIterable {
     case veryBad
     case bad

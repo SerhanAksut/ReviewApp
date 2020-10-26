@@ -3,24 +3,27 @@ import Foundation
 
 public extension Array where Element == String {
     func findTopWords(prefix: Int) -> Self {
-        var uniqueWords: [String: UInt] = [:]
-        self.forEach {
-            let words = $0.components(separatedBy: .whitespacesAndNewlines)
-            words.forEach {
-                guard $0.count >= 4 else { return }
-                let word = $0.lowercased().onlyWords
-                if let count = uniqueWords[word] {
-                    uniqueWords[word] = count + 1
+        var uniqueWords: [(String, UInt)] = []
+        
+        self.flatMap { $0.components(separatedBy: .whitespacesAndNewlines) }
+            .map { $0.lowercased().onlyWords }
+            .filter { $0.count >= 4 }
+            .enumerated()
+            .forEach { index, word in
+                let wordIndex = uniqueWords.firstIndex {
+                    $0.0.trimmed == word.trimmed
+                }
+                if let index = wordIndex {
+                    let copy = uniqueWords[index]
+                    uniqueWords[index] = (copy.0, copy.1 + 1)
                 } else {
-                    uniqueWords[word] = 1
+                    uniqueWords.append((word, 1))
                 }
             }
-        }
-        let topWords = uniqueWords
-            .sorted(by: { $0.value > $1.value })
-            .prefix(prefix)
-            .map { $0.key }
         
-        return topWords
+        return uniqueWords
+            .sorted(by: { $0.1 > $1.1 })
+            .prefix(prefix)
+            .map { $0.0 }
     }
 }
