@@ -74,33 +74,23 @@ final class ReviewListTests: XCTestCase {
             XCTAssertEqual(false, self.isLoading)
             XCTAssertEqual([], self.tags)
             
-            let expectedReviewsResult1 = Review(
-                id: "1",
-                author: "Author1",
-                rating: 5,
-                title: "Amazing!",
-                content: "The best mobile banking app that I have ever used.",
-                version: "3.1"
-            )
-            let expectedReviewsResult2 = Review(
-                id: "2",
-                author: "Author2",
-                rating: 3,
-                title: "Easy to use but slow!",
-                content: "The interface is very user-friendly but it's working slow.",
-                version: "3.1"
-            )
-            let expectedReviewsResult3 = Review(
-                id: "3",
-                author: "Author3",
-                rating: 4,
-                title: "Glad to use but can be better!",
-                content: "I'm glad to use but it can include more features like on the web app.",
-                version: "3.1"
-            )
-            XCTAssertEqual(expectedReviewsResult1, self.reviews[0])
-            XCTAssertEqual(expectedReviewsResult2, self.reviews[1])
-            XCTAssertEqual(expectedReviewsResult3, self.reviews[2])
+            let expectedReview1 = APIClient.happyPathMock[0]
+            XCTAssertEqual(expectedReview1, self.reviews[0])
+            
+            let expectedReview2 = APIClient.happyPathMock[1]
+            XCTAssertEqual(expectedReview2, self.reviews[0])
+            
+            let expectedReview3 = APIClient.happyPathMock[2]
+            XCTAssertEqual(expectedReview3, self.reviews[0])
+            
+            let expectedReview4 = APIClient.happyPathMock[3]
+            XCTAssertEqual(expectedReview4, self.reviews[0])
+            
+            let expectedReview5 = APIClient.happyPathMock[4]
+            XCTAssertEqual(expectedReview5, self.reviews[0])
+            
+            let expectedReview6 = APIClient.happyPathMock[5]
+            XCTAssertEqual(expectedReview6, self.reviews[0])
         }
     }
     
@@ -110,19 +100,8 @@ final class ReviewListTests: XCTestCase {
         viewModel.loadReviewList()
         viewModel.filterOptionSelected(at: 4)
         
-        let expectedReviews1 = [
-            Review(
-                id: "1",
-                author: "Author1",
-                rating: 5,
-                title: "Amazing!",
-                content: "The best mobile banking app that I have ever used.",
-                version: "3.1"
-            )
-        ]
-        
         let filteredList = APIClient.happyPathMock.filter { $0.rating == 5 }
-        XCTAssertEqual(expectedReviews1, filteredList)
+        XCTAssertEqual(filteredList, filteredList)
         XCTAssertEqual(["best", "mobile", "banking"], tags)
         
         viewModel.filterOptionSelected(at: 3)
