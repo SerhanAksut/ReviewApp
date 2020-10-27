@@ -1,5 +1,5 @@
 # ReviewApp
- ING Bank case challange iOS app
+ ING Bank case challenge iOS app
 
 ## Table of contents
 * [General info](#general-info)
