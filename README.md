@@ -30,21 +30,22 @@ There are 10 Swift Packages included in the project totally. All Swift Packages 
 Common folder contains;
 * AppstoreAPI <br />
 It is an API layer for AppStore Reviews. Also, It contains both live and mock version in the package. In addition, it proxies between requestor and core network layer. Also, this layer is responsible from the parsing & error handling operations. Besides, if we want to integrate another api such as Google Play Store Reviews, we will create a new Swift Package for it. The main purpose is that separating each APIs from each other. Because each APIs may have different request & response structure.
-<br />
+
 * Coordinators <br />
 It is a navigation layer. Entire app navigation flows are managed by this layer. For the current situation, we have only one coordinator that called ReviewListCoordinator. We can scale our navigation layer by creating different flows in the app.
-<br />
+
 * Entities <br />
 It is a simple Swift Package that contains common model objects used by multiple packages. All common model objects are kept inside this package.
-<br />
+
 * NetworkCore <br />
 It is a core network layer. It operates all global network standards. Also, only API layers should access it.
-<br />
+
 * SwiftKit <br />
 It is a layer that provides some useful and simplified swift extensions. All these kind of extensions should be defined in this layer.
-<br />
+
 * UIKitHelper <br />
 It is a layer that provides some useful and simplified extensions of UIKit components. It also contains customized UIKit components such as LoadingView.
+
 * UIKitPreview <br />
 It is a layer that allows us to preview view controllers easily without the need of recompiling whole project. You can even preview a controller in live mode. 
 It uses SwiftUI and UIViewControllerRepresentable even this project is not a SwiftUI Project. It is inspired by a Brian Voong's youtube video.
