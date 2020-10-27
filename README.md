@@ -65,7 +65,7 @@ It is a Swift Package that contains ReviewDetail view and its' all components, e
 ## Technologies
 The app is developed using:
 * Swift Language version: 5
-* Swift Package Managers
+* Swift Packages
 
 ## Dependencies
 There is no third party dependency in the app.
