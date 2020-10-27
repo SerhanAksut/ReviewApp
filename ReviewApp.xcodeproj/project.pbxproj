@@ -13,6 +13,7 @@
 		19CA3BAE2542E3D000BBF912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CA3BAD2542E3D000BBF912 /* AppDelegate.swift */; };
 		19CA3BB72542E3D000BBF912 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19CA3BB62542E3D000BBF912 /* Assets.xcassets */; };
 		19CA3BBA2542E3D000BBF912 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CA3BB82542E3D000BBF912 /* LaunchScreen.storyboard */; };
+		19CE279A254762DA0043F749 /* ReviewDetail in Frameworks */ = {isa = PBXBuildFile; productRef = 19CE2799254762DA0043F749 /* ReviewDetail */; };
 		19DC6EE525439BCC000F84AA /* ReviewListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC6EE425439BCC000F84AA /* ReviewListCoordinator.swift */; };
 		19E66D93254422B900346353 /* AppstoreAPILive in Frameworks */ = {isa = PBXBuildFile; productRef = 19E66D92254422B900346353 /* AppstoreAPILive */; };
 		19E66D95254422B900346353 /* Coordinators in Frameworks */ = {isa = PBXBuildFile; productRef = 19E66D94254422B900346353 /* Coordinators */; };
@@ -31,6 +32,7 @@
 		19CA3BB92542E3D000BBF912 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19CA3BBB2542E3D000BBF912 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19CA3BD62542EABA00BBF912 /* Coordinators */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Coordinators; sourceTree = "<group>"; };
+		19CE2797254762A70043F749 /* ReviewDetail */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReviewDetail; sourceTree = "<group>"; };
 		19DC6EC02543006B000F84AA /* NetworkCore */ = {isa = PBXFileReference; lastKnownFileType = folder; path = NetworkCore; sourceTree = "<group>"; };
 		19DC6EC325430203000F84AA /* AppstoreAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppstoreAPI; sourceTree = "<group>"; };
 		19DC6EC62543060C000F84AA /* ReviewList */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReviewList; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19E66D97254422B900346353 /* ReviewList in Frameworks */,
+				19CE279A254762DA0043F749 /* ReviewDetail in Frameworks */,
 				19E66D99254422B900346353 /* UIKitHelper in Frameworks */,
 				19E66D93254422B900346353 /* AppstoreAPILive in Frameworks */,
 				19A065D82545FE0F00A5D545 /* FilterOptions in Frameworks */,
@@ -129,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				19A065D52545FDBE00A5D545 /* FilterOptions */,
+				19CE2797254762A70043F749 /* ReviewDetail */,
 				19DC6EC62543060C000F84AA /* ReviewList */,
 			);
 			path = Screens;
@@ -166,6 +170,7 @@
 				19E66D9A254422B900346353 /* UIKitPreview */,
 				19A065D72545FE0F00A5D545 /* FilterOptions */,
 				194234E62546DCCE0041016F /* SwiftKit */,
+				19CE2799254762DA0043F749 /* ReviewDetail */,
 			);
 			productName = ReviewApp;
 			productReference = 19CA3BAA2542E3D000BBF912 /* ReviewApp.app */;
@@ -427,6 +432,10 @@
 		19A065D72545FE0F00A5D545 /* FilterOptions */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FilterOptions;
+		};
+		19CE2799254762DA0043F749 /* ReviewDetail */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ReviewDetail;
 		};
 		19E66D92254422B900346353 /* AppstoreAPILive */ = {
 			isa = XCSwiftPackageProductDependency;

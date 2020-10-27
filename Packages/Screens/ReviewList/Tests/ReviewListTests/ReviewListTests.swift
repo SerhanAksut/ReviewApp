@@ -1,3 +1,4 @@
+
 import XCTest
 import AppstoreAPI
 @testable import ReviewList
@@ -78,19 +79,19 @@ final class ReviewListTests: XCTestCase {
             XCTAssertEqual(expectedReview1, self.reviews[0])
             
             let expectedReview2 = APIClient.happyPathMock[1]
-            XCTAssertEqual(expectedReview2, self.reviews[0])
+            XCTAssertEqual(expectedReview2, self.reviews[1])
             
             let expectedReview3 = APIClient.happyPathMock[2]
-            XCTAssertEqual(expectedReview3, self.reviews[0])
+            XCTAssertEqual(expectedReview3, self.reviews[2])
             
             let expectedReview4 = APIClient.happyPathMock[3]
-            XCTAssertEqual(expectedReview4, self.reviews[0])
+            XCTAssertEqual(expectedReview4, self.reviews[3])
             
             let expectedReview5 = APIClient.happyPathMock[4]
-            XCTAssertEqual(expectedReview5, self.reviews[0])
+            XCTAssertEqual(expectedReview5, self.reviews[4])
             
             let expectedReview6 = APIClient.happyPathMock[5]
-            XCTAssertEqual(expectedReview6, self.reviews[0])
+            XCTAssertEqual(expectedReview6, self.reviews[5])
         }
     }
     
