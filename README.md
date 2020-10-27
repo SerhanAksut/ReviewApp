@@ -16,9 +16,7 @@ MVVM is used to make the project more readable and easily testable. The slight d
 <br />
 Using protocol keeps view model private and decoupled. You can easily substitute it with another object conforming the protocol of the view model. It helps you mocking even view models.
 <br />
-Using output protocol helps you to test outputs triggered by view actions. In addition, you can easily test the orders of the outputs after trigger an input function.
-<br />
-Also, Builder pattern is used to create view controllers. Each page has own builder as a public access control and these builders are used for creation of contollers.
+Using output protocol helps you to test outputs triggered by view actions. In addition, you can easily test the orders of the outputs after trigger an input function. Also, Builder pattern is used to create view controllers. Each page has own builder as a public access control and these builders are used for creation of contollers.
 
 ## Navigation
 Coordinator pattern is used to maintain navigation between controllers in order to decoupling them by using builders. The biggest advantage is that decreasing compile time by decoupling dependencies between controllers. 
