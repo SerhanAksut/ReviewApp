@@ -47,7 +47,7 @@ The app is developed using:
 * Swift Package Managers
 
 ## Dependencies
-There is no third party dependencies in the app.
+There is no third party dependency in the app.
 	
 ## Setup
 There is no dependency to wait for installation. <br />
