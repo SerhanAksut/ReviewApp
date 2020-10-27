@@ -4,6 +4,7 @@
 ## Table of contents
 * [General info](#general-info)
 * [Design Pattern](#design-pattern)
+* [Built-in Packages](#built-in-Packages)
 * [Technologies](#technologies)
 * [Dependencies](#dependencies)
 * [Setup](#setup)
@@ -21,12 +22,7 @@ Using output protocol helps you to test outputs triggered by view actions. In ad
 Finally, builder pattern is used to create view controllers. Each page has own builder as a public access control and these builders are used for creation of contollers.
 
 ## Navigation
-Coordinator pattern is used to maintain navigation between controllers in order to decoupling them by using builders. The biggest advantage is that decreasing compile time by decoupling dependencies between controllers. 
-	
-## Technologies
-The app is developed using:
-* Swift Language version: 5
-* Swift Package Managers
+Coordinator pattern is used to maintain navigation between controllers in order to decoupling them by using builders. The biggest advantage is that decreasing compile time by decoupling dependencies between controllers.
 
 ## Built-in Packages
 There are 10 Swift Packages in total for the project. All Swift Packages are separated to two main folders that called Common & Screens.
@@ -44,6 +40,11 @@ It is a navigation layer. Entire app navigation flows are managed by this layer.
 * UIKitPreview <br />
 It allows us to preview view controllers easily without the need of recompiling whole project. You can even preview a controller in live mode. 
 It uses SwiftUI and UIViewControllerRepresentable even this project is not a SwiftUI Project. It is inspired by a Brian Voong's youtube video.
+
+## Technologies
+The app is developed using:
+* Swift Language version: 5
+* Swift Package Managers
 
 ## Dependencies
 There is no third party dependencies in the app.
