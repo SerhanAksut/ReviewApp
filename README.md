@@ -50,5 +50,5 @@ The app is developed using:
 There is no third party dependencies in the app.
 	
 ## Setup
-There is no dependency to wait for installation.
+There is no dependency to wait for installation. <br />
 The project was developed by using Xcode Version 12.1 (12A7403).
