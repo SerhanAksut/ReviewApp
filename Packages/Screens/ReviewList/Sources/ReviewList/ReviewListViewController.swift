@@ -143,7 +143,7 @@ struct ReviewListViewController_Preview: PreviewProvider {
                 )
             )
         }
-        .colorScheme(.dark)
+        .colorScheme(.light)
         .edgesIgnoringSafeArea(.all)
     }
 }

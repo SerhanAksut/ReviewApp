@@ -73,14 +73,12 @@ import Entities
 struct ReviewDetailViewController_Preview: PreviewProvider {
     static var previews: some View {
         UIViewControllerPreview {
-            ReviewDetailViewController(
-                viewModel: ReviewDetailViewModel(
-                    with: ReviewDetailModel(
-                        rating: "⭐️⭐️⭐️⭐️⭐️",
-                        author: "Author1",
-                        title: "Title1",
-                        content: "Content1"
-                    )
+            ReviewDetailBuilder.build(
+                review: ReviewDetailModel(
+                    rating: "⭐️⭐️⭐️⭐️⭐️",
+                    author: "Author1",
+                    title: "Title1",
+                    content: "Content1"
                 )
             )
         }

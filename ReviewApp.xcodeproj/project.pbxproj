@@ -10,7 +10,7 @@
 		194234E72546DCCE0041016F /* SwiftKit in Frameworks */ = {isa = PBXBuildFile; productRef = 194234E62546DCCE0041016F /* SwiftKit */; };
 		197F3D5125481896006EE08B /* Entities in Frameworks */ = {isa = PBXBuildFile; productRef = 197F3D5025481896006EE08B /* Entities */; };
 		19A065CB254565B600A5D545 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A065CA254565B600A5D545 /* SceneDelegate.swift */; };
-		19A065D82545FE0F00A5D545 /* FilterOptions in Frameworks */ = {isa = PBXBuildFile; productRef = 19A065D72545FE0F00A5D545 /* FilterOptions */; };
+		19B8AF4B25485E2E007038B4 /* FilterOptions in Frameworks */ = {isa = PBXBuildFile; productRef = 19B8AF4A25485E2E007038B4 /* FilterOptions */; };
 		19CA3BAE2542E3D000BBF912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CA3BAD2542E3D000BBF912 /* AppDelegate.swift */; };
 		19CA3BB72542E3D000BBF912 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19CA3BB62542E3D000BBF912 /* Assets.xcassets */; };
 		19CA3BBA2542E3D000BBF912 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CA3BB82542E3D000BBF912 /* LaunchScreen.storyboard */; };
@@ -27,7 +27,7 @@
 		194234E42546DC870041016F /* SwiftKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SwiftKit; sourceTree = "<group>"; };
 		197F3D4825480CD6006EE08B /* Entities */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Entities; sourceTree = "<group>"; };
 		19A065CA254565B600A5D545 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		19A065D52545FDBE00A5D545 /* FilterOptions */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FilterOptions; sourceTree = "<group>"; };
+		19B8AF4825485DF7007038B4 /* FilterOptions */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FilterOptions; sourceTree = "<group>"; };
 		19CA3BAA2542E3D000BBF912 /* ReviewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReviewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19CA3BAD2542E3D000BBF912 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19CA3BB62542E3D000BBF912 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,9 +52,9 @@
 				19CE279A254762DA0043F749 /* ReviewDetail in Frameworks */,
 				19E66D99254422B900346353 /* UIKitHelper in Frameworks */,
 				19E66D93254422B900346353 /* AppstoreAPILive in Frameworks */,
-				19A065D82545FE0F00A5D545 /* FilterOptions in Frameworks */,
 				197F3D5125481896006EE08B /* Entities in Frameworks */,
 				19E66D9B254422B900346353 /* UIKitPreview in Frameworks */,
+				19B8AF4B25485E2E007038B4 /* FilterOptions in Frameworks */,
 				194234E72546DCCE0041016F /* SwiftKit in Frameworks */,
 				19E66D95254422B900346353 /* Coordinators in Frameworks */,
 			);
@@ -135,7 +135,7 @@
 		19DC6EC5254305E9000F84AA /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				19A065D52545FDBE00A5D545 /* FilterOptions */,
+				19B8AF4825485DF7007038B4 /* FilterOptions */,
 				19CE2797254762A70043F749 /* ReviewDetail */,
 				19DC6EC62543060C000F84AA /* ReviewList */,
 			);
@@ -172,10 +172,10 @@
 				19E66D96254422B900346353 /* ReviewList */,
 				19E66D98254422B900346353 /* UIKitHelper */,
 				19E66D9A254422B900346353 /* UIKitPreview */,
-				19A065D72545FE0F00A5D545 /* FilterOptions */,
 				194234E62546DCCE0041016F /* SwiftKit */,
 				19CE2799254762DA0043F749 /* ReviewDetail */,
 				197F3D5025481896006EE08B /* Entities */,
+				19B8AF4A25485E2E007038B4 /* FilterOptions */,
 			);
 			productName = ReviewApp;
 			productReference = 19CA3BAA2542E3D000BBF912 /* ReviewApp.app */;
@@ -438,7 +438,7 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = Entities;
 		};
-		19A065D72545FE0F00A5D545 /* FilterOptions */ = {
+		19B8AF4A25485E2E007038B4 /* FilterOptions */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FilterOptions;
 		};

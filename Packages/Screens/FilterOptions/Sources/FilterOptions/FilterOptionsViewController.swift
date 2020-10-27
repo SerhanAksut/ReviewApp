@@ -68,7 +68,14 @@ struct ReviewListViewController_Preview: PreviewProvider {
     static var previews: some View {
         UIViewControllerPreview {
             FilterOptionsBuilder.build(
-                items: [],
+                items: [
+                    "⭐️",
+                    "⭐️⭐️",
+                    "⭐️⭐️⭐️",
+                    "⭐️⭐️⭐️⭐️",
+                    "⭐️⭐️⭐️⭐️⭐️",
+                    "Default"
+                ],
                 selectedIndex: nil,
                 completion: { index in
                     if let index = index {
@@ -77,7 +84,7 @@ struct ReviewListViewController_Preview: PreviewProvider {
                 }
             )
         }
-        .colorScheme(.dark)
+        .colorScheme(.light)
         .edgesIgnoringSafeArea(.all)
     }
 }

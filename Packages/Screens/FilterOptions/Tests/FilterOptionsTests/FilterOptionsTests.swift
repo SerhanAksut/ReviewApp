@@ -1,5 +1,6 @@
 
 import XCTest
+
 @testable import FilterOptions
 
 final class FilterOptionsTests: XCTestCase {
