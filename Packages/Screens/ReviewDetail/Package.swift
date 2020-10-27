@@ -1,5 +1,4 @@
 // swift-tools-version:5.3
-// The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
@@ -14,13 +13,19 @@ let package = Package(
             targets: ["ReviewDetail"]),
     ],
     dependencies: [
-        .package(path: "UIKitHelper")
+        .package(path: "UIKitPreview"),
+        .package(path: "UIKitHelper"),
+        .package(path: "SwiftKit"),
+        .package(path: "Entities")
     ],
     targets: [
         .target(
             name: "ReviewDetail",
             dependencies: [
-                "UIKitHelper"
+                "UIKitPreview",
+                "UIKitHelper",
+                "SwiftKit",
+                "Entities"
             ]
         ),
         .testTarget(

@@ -3,15 +3,15 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftKit",
+    name: "Entities",
     products: [
         .library(
-            name: "SwiftKit",
-            targets: ["SwiftKit"]),
+            name: "Entities",
+            targets: ["Entities"]),
     ],
     targets: [
         .target(
-            name: "SwiftKit",
+            name: "Entities",
             dependencies: []),
     ]
 )

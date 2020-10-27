@@ -17,7 +17,8 @@ let package = Package(
         .package(path: "Coordinators"),
         .package(path: "UIKitHelper"),
         .package(path: "UIKitPreview"),
-        .package(path: "SwiftKit")
+        .package(path: "SwiftKit"),
+        .package(path: "Entities")
     ],
     targets: [
         .target(
@@ -27,7 +28,8 @@ let package = Package(
                 "Coordinators",
                 "UIKitHelper",
                 "UIKitPreview",
-                "SwiftKit"
+                "SwiftKit",
+                "Entities"
             ]),
         .testTarget(
             name: "ReviewListTests",

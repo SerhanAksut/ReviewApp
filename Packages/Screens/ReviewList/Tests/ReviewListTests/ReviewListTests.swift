@@ -1,6 +1,8 @@
 
 import XCTest
 import AppstoreAPI
+import Entities
+
 @testable import ReviewList
 
 final class ReviewListTests: XCTestCase {
@@ -11,7 +13,7 @@ final class ReviewListTests: XCTestCase {
     var errorTitle: String!
     var errorMessage: String!
     var errorButtonTitle: String!
-    var reviewID: String!
+    var review: ReviewDetailModel!
     var optionItems: [String]!
     var selectedIndex: Int!
     
@@ -22,7 +24,7 @@ final class ReviewListTests: XCTestCase {
         errorTitle = ""
         errorMessage = ""
         errorButtonTitle = ""
-        reviewID = ""
+        review = nil
         optionItems = []
         selectedIndex = nil
     }
@@ -34,7 +36,7 @@ final class ReviewListTests: XCTestCase {
         errorTitle = nil
         errorMessage = nil
         errorButtonTitle = nil
-        reviewID = nil
+        review = nil
         optionItems = nil
         selectedIndex = nil
     }
@@ -153,8 +155,14 @@ final class ReviewListTests: XCTestCase {
         viewModel.loadReviewList()
         viewModel.didSelectReview(at: 2)
         
-        let expectedID = APIClient.happyPathMock[2].id
-        XCTAssertEqual(expectedID, reviewID)
+        let review = APIClient.happyPathMock[2]
+        let expected = ReviewDetailModel(
+            rating: review.ratingVersionText,
+            author: review.author,
+            title: review.title,
+            content: review.content
+        )
+        XCTAssertEqual(expected, self.review)
     }
     
     func test__showReviewDetail_when_a_review_selected_from_filtered_reviews() {
@@ -165,8 +173,14 @@ final class ReviewListTests: XCTestCase {
         viewModel.didSelectReview(at: 0)
         
         let filteredList = APIClient.happyPathMock.filter { $0.rating == 5 }
-        let expectedID = filteredList[0].id
-        XCTAssertEqual(expectedID, reviewID)
+        let review = filteredList[0]
+        let expected = ReviewDetailModel(
+            rating: review.ratingVersionText,
+            author: review.author,
+            title: review.title,
+            content: review.content
+        )
+        XCTAssertEqual(expected, self.review)
     }
     
     func test__showFilterOptions_when_filter_button_tapped() {
@@ -201,8 +215,8 @@ extension ReviewListTests: ReviewListViewModelOutput {
         errorButtonTitle = buttonTitle
     }
     
-    func showReviewDetail(with reviewID: String) {
-        self.reviewID = reviewID
+    func showReviewDetail(with review: ReviewDetailModel) {
+        self.review = review
     }
     
     func showFilterOptions(items: [String], selectedIndex: Int) {

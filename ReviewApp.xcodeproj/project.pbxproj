@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		194234E72546DCCE0041016F /* SwiftKit in Frameworks */ = {isa = PBXBuildFile; productRef = 194234E62546DCCE0041016F /* SwiftKit */; };
+		197F3D5125481896006EE08B /* Entities in Frameworks */ = {isa = PBXBuildFile; productRef = 197F3D5025481896006EE08B /* Entities */; };
 		19A065CB254565B600A5D545 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A065CA254565B600A5D545 /* SceneDelegate.swift */; };
 		19A065D82545FE0F00A5D545 /* FilterOptions in Frameworks */ = {isa = PBXBuildFile; productRef = 19A065D72545FE0F00A5D545 /* FilterOptions */; };
 		19CA3BAE2542E3D000BBF912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CA3BAD2542E3D000BBF912 /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		194234E42546DC870041016F /* SwiftKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SwiftKit; sourceTree = "<group>"; };
+		197F3D4825480CD6006EE08B /* Entities */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Entities; sourceTree = "<group>"; };
 		19A065CA254565B600A5D545 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		19A065D52545FDBE00A5D545 /* FilterOptions */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FilterOptions; sourceTree = "<group>"; };
 		19CA3BAA2542E3D000BBF912 /* ReviewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReviewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +53,7 @@
 				19E66D99254422B900346353 /* UIKitHelper in Frameworks */,
 				19E66D93254422B900346353 /* AppstoreAPILive in Frameworks */,
 				19A065D82545FE0F00A5D545 /* FilterOptions in Frameworks */,
+				197F3D5125481896006EE08B /* Entities in Frameworks */,
 				19E66D9B254422B900346353 /* UIKitPreview in Frameworks */,
 				194234E72546DCCE0041016F /* SwiftKit in Frameworks */,
 				19E66D95254422B900346353 /* Coordinators in Frameworks */,
@@ -120,6 +123,7 @@
 			children = (
 				19DC6EC325430203000F84AA /* AppstoreAPI */,
 				19CA3BD62542EABA00BBF912 /* Coordinators */,
+				197F3D4825480CD6006EE08B /* Entities */,
 				19DC6EC02543006B000F84AA /* NetworkCore */,
 				194234E42546DC870041016F /* SwiftKit */,
 				19DC6EE825439F3F000F84AA /* UIKitHelper */,
@@ -171,6 +175,7 @@
 				19A065D72545FE0F00A5D545 /* FilterOptions */,
 				194234E62546DCCE0041016F /* SwiftKit */,
 				19CE2799254762DA0043F749 /* ReviewDetail */,
+				197F3D5025481896006EE08B /* Entities */,
 			);
 			productName = ReviewApp;
 			productReference = 19CA3BAA2542E3D000BBF912 /* ReviewApp.app */;
@@ -428,6 +433,10 @@
 		194234E62546DCCE0041016F /* SwiftKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SwiftKit;
+		};
+		197F3D5025481896006EE08B /* Entities */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Entities;
 		};
 		19A065D72545FE0F00A5D545 /* FilterOptions */ = {
 			isa = XCSwiftPackageProductDependency;

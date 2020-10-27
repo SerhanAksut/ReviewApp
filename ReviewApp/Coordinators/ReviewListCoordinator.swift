@@ -4,6 +4,8 @@ import AppstoreAPILive
 import Coordinators
 import ReviewList
 import FilterOptions
+import ReviewDetail
+import Entities
 
 final class ReviewListCoordinator: ReviewListCoordinatorProtocol {
     private var navigationController: UINavigationController?
@@ -23,8 +25,9 @@ final class ReviewListCoordinator: ReviewListCoordinatorProtocol {
         self.navigationController = navigationController
     }
     
-    func showReviewDetail(with reviewID: String) {
-        
+    func showReviewDetail(with review: ReviewDetailModel) {
+        let controller = ReviewDetailBuilder.build(review: review)
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     func showFilterOptions(

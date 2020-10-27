@@ -1,6 +1,7 @@
 
 import AppstoreAPI
 import SwiftKit
+import Entities
 
 // MARK: - IO
 protocol ReviewListViewModelInput {
@@ -17,7 +18,7 @@ protocol ReviewListViewModelOutput: class {
     func hideLoading()
     func reloadUI(tags: [String], reviews: [Review])
     func displayError(title: String, message: String, buttonTitle: String)
-    func showReviewDetail(with reviewID: String)
+    func showReviewDetail(with review: ReviewDetailModel)
     func showFilterOptions(items: [String], selectedIndex: Int)
 }
 
@@ -72,7 +73,13 @@ extension ReviewListViewModel: ReviewListViewModelInput {
     
     func didSelectReview(at index: Int) {
         let review = state.reviews[index]
-        output?.showReviewDetail(with: review.id)
+        let model = ReviewDetailModel(
+            rating: review.ratingVersionText,
+            author: review.author,
+            title: review.title,
+            content: review.content
+        )
+        output?.showReviewDetail(with: model)
     }
     
     func didSelectFilterButton() {

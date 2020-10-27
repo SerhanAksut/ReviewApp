@@ -9,9 +9,15 @@ let package = Package(
             name: "Coordinators",
             targets: ["Coordinators"]),
     ],
+    dependencies: [
+        .package(path: "Entities")
+    ],
     targets: [
         .target(
-            name: "Coordinators"
+            name: "Coordinators",
+            dependencies: [
+                "Entities"
+            ]
         )
     ]
 )

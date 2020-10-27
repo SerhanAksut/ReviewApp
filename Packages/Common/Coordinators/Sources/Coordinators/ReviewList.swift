@@ -1,7 +1,9 @@
 
+import Entities
+
 public protocol ReviewListCoordinatorProtocol: class {
     
-    func showReviewDetail(with reviewID: String)
+    func showReviewDetail(with review: ReviewDetailModel)
     func showFilterOptions(
         items: [String],
         selectedIndex: Int?,

@@ -128,6 +128,23 @@ public extension UIView {
         )
         return constraint
     }
+    
+    @discardableResult
+    func alignLessOrEqualBottom(offset: CGFloat = .zero) -> NSLayoutConstraint {
+        translatesAutoresizingMaskIntoConstraints = false
+        let constraint = bottomAnchor.constraint(
+            lessThanOrEqualTo: superview!.bottomAnchor,
+            constant: -offset
+        )
+        return constraint
+    }
+    
+    @discardableResult
+    func alignWidth(size: CGFloat) -> NSLayoutConstraint {
+        translatesAutoresizingMaskIntoConstraints = false
+        let constraint = widthAnchor.constraint(equalToConstant: size)
+        return constraint
+    }
 }
 
 // MARK: - Activate Constraints

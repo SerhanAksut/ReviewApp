@@ -2,6 +2,7 @@
 import UIKit
 import UIKitHelper
 import Coordinators
+import Entities
 
 private typealias Handlers = LoadingHandler & ErrorHandler
 
@@ -39,7 +40,7 @@ final class ReviewListViewController: UIViewController, Handlers {
         viewModel.output = self
         viewModel.loadReviewList()
         
-        title = "Review List"
+        title = Constants.title
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(named: "filter"),
@@ -99,8 +100,8 @@ extension ReviewListViewController: ReviewListViewModelOutput {
         showAlert(title: title, message: message, buttonTitle: buttonTitle)
     }
     
-    func showReviewDetail(with reviewID: String) {
-        coordinator?.showReviewDetail(with: reviewID)
+    func showReviewDetail(with review: ReviewDetailModel) {
+        coordinator?.showReviewDetail(with: review)
     }
     
     func showFilterOptions(items: [String], selectedIndex: Int) {
@@ -120,6 +121,11 @@ extension ReviewListViewController {
     @objc func didSelectFilterButton() {
         viewModel.didSelectFilterButton()
     }
+}
+
+// MARK: - Constants
+private enum Constants {
+    static let title = "Review List"
 }
 
 // MARK: - UIKit Preview
