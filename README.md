@@ -26,7 +26,7 @@ Coordinator pattern is used to maintain navigation between controllers in order 
 
 ## Built-in Packages
 There are 10 Swift Packages included in the project totally. All Swift Packages are separated to two main folders that called Common & Screens.
-<br />
+<br /><br />
 Common folder contains;
 * AppstoreAPI <br />
 It is an API layer for AppStore Reviews. Also, It contains both live and mock version in the package. In addition, it proxies between requestor and core network layer. Also, this layer is responsible from the parsing & error handling operations. Besides, if we want to integrate another api such as Google Play Store Reviews, we will create a new Swift Package for it. The main purpose is that separating each APIs from each other. Because each APIs may have different request & response structure.
