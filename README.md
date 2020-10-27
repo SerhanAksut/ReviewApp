@@ -13,7 +13,7 @@
 This is an iOS Project using `UIKit` for ING Bank mobile team. It is a three pages application which lists reviews, filters reviews and displays detailed information about selected review. The first one is that ReviewList page contains a `UITableView` to display reviews. The second one is that FilterOptions page contains a vertical `UIStackView` to display filtering options and the last one is that ReviewDetail page contains a `UIScrollView` and vertial `UIStackView` to display detailed information.
 
 ## Design Pattern
-MVVM is used to make the project more readable and easily testable. The slight difference between commonly known MVVM and the one used in this project is using IO(Input/Output) mechanism as protocols for view models.
+MVVM is used to make the project more readable and easily testable. One of the biggest advantage of MVVM design pattern is that it seperates business and UI logics. Besides, the slight difference between commonly known MVVM and the one used in this project is using IO(Input/Output) mechanism as protocols for view models.
 <br />
 Using protocol keeps view model private and decoupled. You can easily substitute it with another object conforming the protocol of the view model. It helps you mocking even view models.
 <br />
