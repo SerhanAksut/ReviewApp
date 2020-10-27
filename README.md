@@ -50,6 +50,17 @@ It is a layer that provides some useful and simplified extensions of UIKit compo
 It is a layer that allows us to preview view controllers easily without the need of recompiling whole project. You can even preview a controller in live mode. 
 It uses SwiftUI and UIViewControllerRepresentable even this project is not a SwiftUI Project. It is inspired by a Brian Voong's youtube video.
 
+<br />
+Screens folder contains;
+* ReviewList <br />
+It is a Swift Package that contains ReviewList view and its' all components, even unit tests. In addition, it is a root controller for the app. It navigates to both of FilterOptions & ReviewDetail.
+
+* FilterOptions <br />
+It is a Swift Package that contains FilterOptions view and its' all components, even unit tests and mock data. It is presented by the ReviewList controller by injecting 3 parameters that `items` as a String array, `selectedIndex` as an optional Int and a closure called `completion`.
+
+* ReviewDetail <br />
+It is a Swift Package that contains ReviewDetail view and its' all components, even unit tests and mock data. It is also presented by the ReviewList controller by injecting custom model object called `Review`.
+
 ## Technologies
 The app is developed using:
 * Swift Language version: 5
