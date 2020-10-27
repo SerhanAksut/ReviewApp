@@ -77,11 +77,7 @@ struct ReviewListViewController_Preview: PreviewProvider {
                     "Default"
                 ],
                 selectedIndex: nil,
-                completion: { index in
-                    if let index = index {
-                        print(index)
-                    }
-                }
+                completion: { _ in }
             )
         }
         .colorScheme(.light)
