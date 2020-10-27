@@ -74,11 +74,13 @@ struct ReviewDetailViewController_Preview: PreviewProvider {
     static var previews: some View {
         UIViewControllerPreview {
             ReviewDetailBuilder.build(
-                review: ReviewDetailModel(
-                    rating: "⭐️⭐️⭐️⭐️⭐️",
-                    author: "Author1",
-                    title: "Title1",
-                    content: "Content1"
+                review: Review(
+                    id: "1",
+                    author: "Author",
+                    rating: 5,
+                    title: "Title",
+                    content: "Content",
+                    version: "3.21"
                 )
             )
         }

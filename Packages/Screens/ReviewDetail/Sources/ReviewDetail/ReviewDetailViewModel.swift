@@ -16,11 +16,11 @@ protocol ReviewDetailViewModelOutput: class {
 final class ReviewDetailViewModel {
     
     // MARK: - Properties
-    private let review: ReviewDetailModel
+    private let review: Review
     weak var output: ReviewDetailViewModelOutput?
     
     // MARK: - Initialization
-    init(with review: ReviewDetailModel) {
+    init(with review: Review) {
         self.review = review
     }
 }
@@ -28,7 +28,7 @@ final class ReviewDetailViewModel {
 // MARK: - ReviewDetailViewModel Input
 extension ReviewDetailViewModel: ReviewDetailViewModelInput {
     func loadDetails() {
-        output?.displayRating(with: review.rating)
+        output?.displayRating(with: review.ratingVersionText)
         output?.displayAuthor(with: review.author)
         output?.displayTitle(with: review.title)
         output?.displayContent(with: review.content)

@@ -18,7 +18,7 @@ protocol ReviewListViewModelOutput: class {
     func hideLoading()
     func reloadUI(tags: [String], reviews: [Review])
     func displayError(title: String, message: String, buttonTitle: String)
-    func showReviewDetail(with review: ReviewDetailModel)
+    func showReviewDetail(with review: Review)
     func showFilterOptions(items: [String], selectedIndex: Int)
 }
 
@@ -73,13 +73,7 @@ extension ReviewListViewModel: ReviewListViewModelInput {
     
     func didSelectReview(at index: Int) {
         let review = state.reviews[index]
-        let model = ReviewDetailModel(
-            rating: review.ratingVersionText,
-            author: review.author,
-            title: review.title,
-            content: review.content
-        )
-        output?.showReviewDetail(with: model)
+        output?.showReviewDetail(with: review)
     }
     
     func didSelectFilterButton() {

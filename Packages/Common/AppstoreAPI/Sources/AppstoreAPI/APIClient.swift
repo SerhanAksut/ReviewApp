@@ -1,5 +1,5 @@
 
-import Foundation
+import Entities
 
 public struct APIClient {
     public typealias Completion<Model> = (Result<Model, APIError>) -> Void

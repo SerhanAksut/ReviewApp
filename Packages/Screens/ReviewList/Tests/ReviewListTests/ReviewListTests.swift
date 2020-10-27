@@ -13,7 +13,7 @@ final class ReviewListTests: XCTestCase {
     var errorTitle: String!
     var errorMessage: String!
     var errorButtonTitle: String!
-    var review: ReviewDetailModel!
+    var review: Review!
     var optionItems: [String]!
     var selectedIndex: Int!
     
@@ -155,13 +155,7 @@ final class ReviewListTests: XCTestCase {
         viewModel.loadReviewList()
         viewModel.didSelectReview(at: 2)
         
-        let review = APIClient.happyPathMock[2]
-        let expected = ReviewDetailModel(
-            rating: review.ratingVersionText,
-            author: review.author,
-            title: review.title,
-            content: review.content
-        )
+        let expected = APIClient.happyPathMock[2]
         XCTAssertEqual(expected, self.review)
     }
     
@@ -173,13 +167,7 @@ final class ReviewListTests: XCTestCase {
         viewModel.didSelectReview(at: 0)
         
         let filteredList = APIClient.happyPathMock.filter { $0.rating == 5 }
-        let review = filteredList[0]
-        let expected = ReviewDetailModel(
-            rating: review.ratingVersionText,
-            author: review.author,
-            title: review.title,
-            content: review.content
-        )
+        let expected = filteredList[0]
         XCTAssertEqual(expected, self.review)
     }
     
@@ -234,7 +222,7 @@ extension ReviewListTests: ReviewListViewModelOutput {
         errorButtonTitle = buttonTitle
     }
     
-    func showReviewDetail(with review: ReviewDetailModel) {
+    func showReviewDetail(with review: Review) {
         self.review = review
     }
     

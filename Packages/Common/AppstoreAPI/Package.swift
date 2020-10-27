@@ -15,17 +15,22 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(path: "NetworkCore")
+        .package(path: "NetworkCore"),
+        .package(path: "Entities")
     ],
     targets: [
         .target(
-            name: "AppstoreAPI"
+            name: "AppstoreAPI",
+            dependencies: [
+                "Entities"
+            ]
         ),
         .target(
             name: "AppstoreAPILive",
             dependencies: [
                 "AppstoreAPI",
                 "NetworkCore"
-            ]),
+            ]
+        ),
     ]
 )

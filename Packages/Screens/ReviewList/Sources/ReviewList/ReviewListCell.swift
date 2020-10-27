@@ -1,7 +1,7 @@
 
 import UIKit
 import UIKitHelper
-import AppstoreAPI
+import Entities
 
 final class ReviewListCell: UITableViewCell {
     

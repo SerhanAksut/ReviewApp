@@ -1,5 +1,5 @@
 
-import Foundation
+import Entities
 
 public struct Feed: Decodable {
     public let reviews: [Review]

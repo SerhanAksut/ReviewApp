@@ -25,7 +25,7 @@ final class ReviewListCoordinator: ReviewListCoordinatorProtocol {
         self.navigationController = navigationController
     }
     
-    func showReviewDetail(with review: ReviewDetailModel) {
+    func showReviewDetail(with review: Review) {
         let controller = ReviewDetailBuilder.build(review: review)
         navigationController?.pushViewController(controller, animated: true)
     }

@@ -100,7 +100,7 @@ extension ReviewListViewController: ReviewListViewModelOutput {
         showAlert(title: title, message: message, buttonTitle: buttonTitle)
     }
     
-    func showReviewDetail(with review: ReviewDetailModel) {
+    func showReviewDetail(with review: Review) {
         coordinator?.showReviewDetail(with: review)
     }
     

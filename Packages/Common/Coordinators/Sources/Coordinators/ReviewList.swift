@@ -3,7 +3,7 @@ import Entities
 
 public protocol ReviewListCoordinatorProtocol: class {
     
-    func showReviewDetail(with review: ReviewDetailModel)
+    func showReviewDetail(with review: Review)
     func showFilterOptions(
         items: [String],
         selectedIndex: Int?,

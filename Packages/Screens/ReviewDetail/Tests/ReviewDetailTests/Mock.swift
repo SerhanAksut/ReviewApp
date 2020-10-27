@@ -1,39 +1,49 @@
 
 import Entities
 
-extension ReviewDetailModel {
+extension Review {
     static let mockHappyPath = Self(
-        rating: "⭐️⭐️⭐️⭐️⭐️",
+        id: "1",
         author: "Author1",
+        rating: 5,
         title: "Title1",
-        content: "Content1"
+        content: "Content1",
+        version: "3.21"
     )
     
     static let mockRatingEmpty = Self(
-        rating: "",
-        author: "Author1",
-        title: "Title1",
-        content: "Content1"
+        id: "2",
+        author: "Author2",
+        rating: 0,
+        title: "Title2",
+        content: "Content2",
+        version: "3.21"
     )
     
     static let mockAuthorEmpty = Self(
-        rating: "⭐️⭐️⭐️⭐️⭐️",
+        id: "3",
         author: "",
-        title: "Title1",
-        content: "Content1"
+        rating: 5,
+        title: "Title3",
+        content: "Content3",
+        version: "3.21"
     )
     
     static let mockTitleEmpty = Self(
-        rating: "⭐️⭐️⭐️⭐️⭐️",
-        author: "Author1",
+        id: "4",
+        author: "Author4",
+        rating: 5,
         title: "",
-        content: "Content1"
+        content: "Content4",
+        version: "3.21"
     )
     
     static let mockContentEmpty = Self(
-        rating: "⭐️⭐️⭐️⭐️⭐️",
-        author: "Author1",
-        title: "Title1",
-        content: ""
+        id: "5",
+        author: "Author5",
+        rating: 5,
+        title: "Title5",
+        content: "",
+        version: "3.21"
     )
 }

@@ -1,5 +1,6 @@
 
 import Foundation
+import Entities
 
 public extension APIClient {
     static let happyPath = Self(
