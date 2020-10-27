@@ -7,8 +7,8 @@ public extension Array where Element == String {
         self.forEach {
             let words = $0.components(separatedBy: .whitespacesAndNewlines)
             words.forEach {
-                guard $0.count >= 4 else { return }
                 let word = $0.lowercased().onlyWords
+                guard word.count >= 4 else { return }
                 if let count = uniqueWords[word] {
                     uniqueWords[word] = count + 1
                 } else {

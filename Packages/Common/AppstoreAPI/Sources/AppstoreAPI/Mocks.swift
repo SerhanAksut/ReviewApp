@@ -31,7 +31,7 @@ public extension APIClient {
                 author: "Author1",
                 rating: 5,
                 title: "Amazing!",
-                content: "The best mobile banking app that I have ever used.",
+                content: "The best mobile banking app that I have ever used. Best mobile banking. Mobile banking. Banking",
                 version: "3.1"
             ),
             Review(
@@ -39,7 +39,7 @@ public extension APIClient {
                 author: "Author2",
                 rating: 3,
                 title: "Easy to use but slow!",
-                content: "The interface is very user-friendly but it's working slow.",
+                content: "The interface is very user-friendly but it's working slow. Working slow. Slow. Slow loading. Working Nice. Interface.",
                 version: "3.1"
             ),
             Review(
@@ -47,7 +47,7 @@ public extension APIClient {
                 author: "Author3",
                 rating: 4,
                 title: "Glad to use but can be better!",
-                content: "I'm glad to use but it can include more features like on the web app.",
+                content: "I'm glad to use but it can include more features like on the web app. It can include more features. Include more features. More features. Features",
                 version: "3.1"
             ),
             Review(
@@ -63,7 +63,7 @@ public extension APIClient {
                 author: "Author5",
                 rating: 2,
                 title: "Not Useful!",
-                content: "This app is not useful for me!",
+                content: "This app is not useful for me!. This useful for me. useful.",
                 version: "3.1"
             )
         ]

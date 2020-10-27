@@ -105,22 +105,22 @@ final class ReviewListTests: XCTestCase {
         
         let filteredList = APIClient.happyPathMock.filter { $0.rating == 5 }
         XCTAssertEqual(filteredList, filteredList)
-        XCTAssertEqual(["best", "mobile", "banking"], tags)
+        XCTAssertEqual(["banking", "mobile", "best"], tags)
         
         viewModel.filterOptionSelected(at: 3)
-        XCTAssertEqual(["glad", "include", "more"], tags)
+        XCTAssertEqual(["features", "more", "include"], tags)
         
         let expectedReviews2 = APIClient.happyPathMock.filter { $0.rating == 4 }
         XCTAssertEqual(expectedReviews2, reviews)
         
         viewModel.filterOptionSelected(at: 2)
-        XCTAssertEqual(["interface", "very", "userfriendly"], tags)
+        XCTAssertEqual(["slow", "working", "interface"], tags)
         
         let expectedReviews3 = APIClient.happyPathMock.filter { $0.rating == 3 }
         XCTAssertEqual(expectedReviews3, reviews)
         
         viewModel.filterOptionSelected(at: 1)
-        XCTAssertEqual(["this", "useful"], tags)
+        XCTAssertEqual(["useful", "this"], tags)
         
         let expectedReviews4 = APIClient.happyPathMock.filter { $0.rating == 2 }
         XCTAssertEqual(expectedReviews4, reviews)
@@ -191,6 +191,25 @@ final class ReviewListTests: XCTestCase {
         
         let expectedResult = FilterOption.allCases.map { $0.title }
         XCTAssertEqual(expectedResult, optionItems)
+    }
+    
+    func test__numberOfReview_when_list_loading() {
+        let viewModel = ReviewListViewModel(apiClient: .happyPath)
+        viewModel.output = self
+        viewModel.loadReviewList()
+        
+        let numberOfReview = viewModel.numberOfReview
+        XCTAssertEqual(5, numberOfReview)
+    }
+    
+    func test__reviewAtIndex_when_list_loading() {
+        let viewModel = ReviewListViewModel(apiClient: .happyPath)
+        viewModel.output = self
+        viewModel.loadReviewList()
+        
+        let review = viewModel.review(at: 0)
+        let expected = APIClient.happyPathMock[0]
+        XCTAssertEqual(expected, review)
     }
 }
 
