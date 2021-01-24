@@ -1,10 +1,8 @@
 
-import Entities
-
-public struct Feed: Decodable {
-    public let reviews: [Review]
+struct Feed: Decodable {
+    let reviews: [Review]
     
-    public init(from decoder: Decoder) throws {
+    init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let feedContainer = try container.nestedContainer(
             keyedBy: CodingKeys.self,

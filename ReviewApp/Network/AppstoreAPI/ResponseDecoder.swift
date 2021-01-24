@@ -1,7 +1,7 @@
 
 import Foundation
 
-public func decode<Model>(
+func decode<Model>(
     data: Data,
     decodingInfo: [CodingUserInfoKey: Any]?
 ) throws -> Model where Model: Decodable {

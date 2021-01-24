@@ -1,8 +1,4 @@
 
-import AppstoreAPI
-import SwiftKit
-import Entities
-
 // MARK: - IO
 protocol ReviewListViewModelInput {
     func loadReviewList()

@@ -1,7 +1,5 @@
 
 import UIKit
-import UIKitHelper
-import AppstoreAPILive
 
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?

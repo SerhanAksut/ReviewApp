@@ -1,8 +1,7 @@
 
 import Foundation
-import Entities
 
-public extension APIClient {
+extension APIClient {
     static let happyPath = Self(
         reviewList: { completion in
             completion(.success(happyPathMock))

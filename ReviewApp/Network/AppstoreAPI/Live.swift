@@ -1,10 +1,8 @@
 
 import Foundation
-import NetworkCore
-import AppstoreAPI
 
 // MARK: - Live
-public extension APIClient {
+extension APIClient {
     static let live = Self(
         reviewList: { completion in
             DispatchQueue.global().async {

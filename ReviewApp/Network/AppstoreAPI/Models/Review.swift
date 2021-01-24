@@ -1,34 +1,23 @@
+//
+//  Review.swift
+//  ReviewApp
+//
+//  Created by Serhan Aksut on 24.01.2021.
+//
 
 import Foundation
 
-public struct Review: Equatable {
-    public let id: String
-    public let author: String
-    public let rating: UInt
-    public let title: String
-    public let content: String
-    public let version: String
-    
-    public init(
-        id: String,
-        author: String,
-        rating: UInt,
-        title: String,
-        content: String,
-        version: String
-    ) {
-        self.id = id
-        self.author = author
-        self.rating = rating
-        self.title = title
-        self.content = content
-        self.version = version
-    }
+struct Review: Equatable {
+    let id: String
+    let author: String
+    let rating: UInt
+    let title: String
+    let content: String
+    let version: String
 }
 
-// MARK: - Decodable
 extension Review: Decodable {
-    public init(from decoder: Decoder) throws {
+    init(from decoder: Decoder) throws {
         let idContainer = try decoder.container(keyedBy: CodingKeys.IDContainer.self)
         let idValueContainer = try idContainer.nestedContainer(
             keyedBy: CodingKeys.IDContainer.IDValueContainer.self,
@@ -133,7 +122,7 @@ extension Review: Decodable {
 }
 
 // MARK: - External Helpers
-public extension Review {
+extension Review {
     var ratingVersionText: String {
         if rating > 0 {
             var result = ""

@@ -1,7 +1,5 @@
 
 import UIKit
-import UIKitHelper
-import Entities
 
 final class ReviewListView: UIView {
     
