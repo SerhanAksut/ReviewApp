@@ -12,6 +12,7 @@ final class ReviewListViewController: UIViewController, ActionHandlers {
     }
     
     private let viewModel: ReviewListViewModel
+    weak var input: ReviewListViewModelInput?
     
     // MARK: - Initialization
     init(viewModel: ReviewListViewModel) {
@@ -33,10 +34,12 @@ final class ReviewListViewController: UIViewController, ActionHandlers {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.output = self
-        viewModel.loadReviewList()
-        
         title = "Review List"
+        
+        input = viewModel
+        viewModel.output = self
+        
+        input?.loadReviewList()
     }
 }
 
@@ -46,7 +49,7 @@ extension ReviewListViewController: UITableViewDataSource {
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
     ) -> Int {
-        viewModel.numberOfReview
+        input?.numberOfReview ?? 0
     }
     
     func tableView(
@@ -54,8 +57,9 @@ extension ReviewListViewController: UITableViewDataSource {
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
         let cell: ReviewListCell = tableView.dequeue(at: indexPath)
-        let review = viewModel.review(at: indexPath.row)
-        cell.populate(with: review)
+        if let review = input?.review(at: indexPath.row) {
+            cell.populate(with: review)
+        }
         return cell
     }
 }

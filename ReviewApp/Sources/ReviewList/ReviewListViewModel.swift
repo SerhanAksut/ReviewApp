@@ -1,6 +1,6 @@
 
 // MARK: - IO
-protocol ReviewListViewModelInput {
+protocol ReviewListViewModelInput: AnyObject {
     func loadReviewList()
     var numberOfReview: Int { get }
     func review(at index: Int) -> Review
