@@ -16,25 +16,13 @@
 		191ABE2E25BD830D002B548B /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE2A25BD830D002B548B /* With.swift */; };
 		191ABE2F25BD830D002B548B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE2B25BD830D002B548B /* LoadingView.swift */; };
 		191ABE3325BD8357002B548B /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE3225BD8357002B548B /* UIColor+Extensions.swift */; };
-		191ABE3725BD8381002B548B /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE3625BD8381002B548B /* UITableView+Extensions.swift */; };
-		191ABE3A25BD83E7002B548B /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE3925BD83E7002B548B /* UIView+Extensions.swift */; };
-		191ABE4E25BD8AFE002B548B /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE4925BD8AFE002B548B /* HttpMethod.swift */; };
-		191ABE4F25BD8AFE002B548B /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE4A25BD8AFE002B548B /* Request.swift */; };
-		191ABE5025BD8AFE002B548B /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE4B25BD8AFE002B548B /* NetworkError.swift */; };
-		191ABE5125BD8AFE002B548B /* RequestLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE4C25BD8AFE002B548B /* RequestLoader.swift */; };
-		191ABE5225BD8AFE002B548B /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE4D25BD8AFE002B548B /* Decoder.swift */; };
-		191ABE5925BD8BA1002B548B /* ReviewListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE5825BD8BA1002B548B /* ReviewListRequest.swift */; };
 		191ABE5E25BD8BE7002B548B /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE5D25BD8BE7002B548B /* Feed.swift */; };
-		191ABE6525BD8C3E002B548B /* ResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE6125BD8C3E002B548B /* ResponseDecoder.swift */; };
-		191ABE6625BD8C3E002B548B /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE6225BD8C3E002B548B /* APIClient.swift */; };
-		191ABE6725BD8C3E002B548B /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE6325BD8C3E002B548B /* APIError.swift */; };
-		191ABE6825BD8C3E002B548B /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE6425BD8C3E002B548B /* Mocks.swift */; };
-		191ABE6C25BD8C77002B548B /* Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE6B25BD8C77002B548B /* Live.swift */; };
 		191ABE7225BD8D81002B548B /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE7125BD8D81002B548B /* Review.swift */; };
 		19A065CB254565B600A5D545 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A065CA254565B600A5D545 /* SceneDelegate.swift */; };
 		19CA3BAE2542E3D000BBF912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CA3BAD2542E3D000BBF912 /* AppDelegate.swift */; };
 		19CA3BB72542E3D000BBF912 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19CA3BB62542E3D000BBF912 /* Assets.xcassets */; };
 		19CA3BBA2542E3D000BBF912 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CA3BB82542E3D000BBF912 /* LaunchScreen.storyboard */; };
+		B8366FEF25BDB8CB003B1027 /* AppStoreApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8366FEE25BDB8CB003B1027 /* AppStoreApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,20 +35,7 @@
 		191ABE2A25BD830D002B548B /* With.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = With.swift; sourceTree = "<group>"; };
 		191ABE2B25BD830D002B548B /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		191ABE3225BD8357002B548B /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
-		191ABE3625BD8381002B548B /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
-		191ABE3925BD83E7002B548B /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
-		191ABE4925BD8AFE002B548B /* HttpMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
-		191ABE4A25BD8AFE002B548B /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		191ABE4B25BD8AFE002B548B /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		191ABE4C25BD8AFE002B548B /* RequestLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestLoader.swift; sourceTree = "<group>"; };
-		191ABE4D25BD8AFE002B548B /* Decoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
-		191ABE5825BD8BA1002B548B /* ReviewListRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewListRequest.swift; sourceTree = "<group>"; };
 		191ABE5D25BD8BE7002B548B /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
-		191ABE6125BD8C3E002B548B /* ResponseDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseDecoder.swift; sourceTree = "<group>"; };
-		191ABE6225BD8C3E002B548B /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		191ABE6325BD8C3E002B548B /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		191ABE6425BD8C3E002B548B /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
-		191ABE6B25BD8C77002B548B /* Live.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Live.swift; sourceTree = "<group>"; };
 		191ABE7125BD8D81002B548B /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		19A065CA254565B600A5D545 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		19CA3BAA2542E3D000BBF912 /* ReviewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReviewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +43,7 @@
 		19CA3BB62542E3D000BBF912 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19CA3BB92542E3D000BBF912 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19CA3BBB2542E3D000BBF912 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8366FEE25BDB8CB003B1027 /* AppStoreApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +60,8 @@
 		191ABE0625BD807B002B548B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B8366FED25BDB71A003B1027 /* Network */,
+				191ABE5725BD8B88002B548B /* Models */,
 				191ABE0725BD8099002B548B /* ReviewList */,
 			);
 			path = Sources;
@@ -115,53 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				191ABE3225BD8357002B548B /* UIColor+Extensions.swift */,
-				191ABE3625BD8381002B548B /* UITableView+Extensions.swift */,
-				191ABE3925BD83E7002B548B /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		191ABE4625BD8AB9002B548B /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				191ABE4825BD8AC6002B548B /* AppstoreAPI */,
-				191ABE4725BD8AC2002B548B /* Core */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		191ABE4725BD8AC2002B548B /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				191ABE4925BD8AFE002B548B /* HttpMethod.swift */,
-				191ABE4B25BD8AFE002B548B /* NetworkError.swift */,
-				191ABE4A25BD8AFE002B548B /* Request.swift */,
-				191ABE4C25BD8AFE002B548B /* RequestLoader.swift */,
-				191ABE4D25BD8AFE002B548B /* Decoder.swift */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		191ABE4825BD8AC6002B548B /* AppstoreAPI */ = {
-			isa = PBXGroup;
-			children = (
-				191ABE6225BD8C3E002B548B /* APIClient.swift */,
-				191ABE6325BD8C3E002B548B /* APIError.swift */,
-				191ABE6B25BD8C77002B548B /* Live.swift */,
-				191ABE6425BD8C3E002B548B /* Mocks.swift */,
-				191ABE5725BD8B88002B548B /* Models */,
-				191ABE5525BD8B7D002B548B /* Requests */,
-				191ABE6125BD8C3E002B548B /* ResponseDecoder.swift */,
-			);
-			path = AppstoreAPI;
-			sourceTree = "<group>";
-		};
-		191ABE5525BD8B7D002B548B /* Requests */ = {
-			isa = PBXGroup;
-			children = (
-				191ABE5825BD8BA1002B548B /* ReviewListRequest.swift */,
-			);
-			path = Requests;
 			sourceTree = "<group>";
 		};
 		191ABE5725BD8B88002B548B /* Models */ = {
@@ -208,7 +141,6 @@
 				191ABE2725BD82DF002B548B /* Helpers */,
 				19CA3BBB2542E3D000BBF912 /* Info.plist */,
 				19CA3BB82542E3D000BBF912 /* LaunchScreen.storyboard */,
-				191ABE4625BD8AB9002B548B /* Network */,
 				191ABE0625BD807B002B548B /* Sources */,
 			);
 			path = ReviewApp;
@@ -219,6 +151,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B8366FED25BDB71A003B1027 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B8366FEE25BDB8CB003B1027 /* AppStoreApi.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,29 +232,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				191ABE5125BD8AFE002B548B /* RequestLoader.swift in Sources */,
 				191ABE5E25BD8BE7002B548B /* Feed.swift in Sources */,
-				191ABE3725BD8381002B548B /* UITableView+Extensions.swift in Sources */,
-				191ABE5025BD8AFE002B548B /* NetworkError.swift in Sources */,
 				191ABE2E25BD830D002B548B /* With.swift in Sources */,
-				191ABE6625BD8C3E002B548B /* APIClient.swift in Sources */,
 				191ABE2D25BD830D002B548B /* LoadingHandler.swift in Sources */,
 				191ABE2C25BD830D002B548B /* ErrorHandler.swift in Sources */,
-				191ABE6525BD8C3E002B548B /* ResponseDecoder.swift in Sources */,
 				191ABE2F25BD830D002B548B /* LoadingView.swift in Sources */,
-				191ABE5225BD8AFE002B548B /* Decoder.swift in Sources */,
-				191ABE6825BD8C3E002B548B /* Mocks.swift in Sources */,
-				191ABE6725BD8C3E002B548B /* APIError.swift in Sources */,
-				191ABE6C25BD8C77002B548B /* Live.swift in Sources */,
-				191ABE3A25BD83E7002B548B /* UIView+Extensions.swift in Sources */,
 				191ABE1225BD80D3002B548B /* ReviewListCell.swift in Sources */,
-				191ABE4F25BD8AFE002B548B /* Request.swift in Sources */,
 				19CA3BAE2542E3D000BBF912 /* AppDelegate.swift in Sources */,
-				191ABE5925BD8BA1002B548B /* ReviewListRequest.swift in Sources */,
 				191ABE1525BD80D3002B548B /* ReviewListViewController.swift in Sources */,
 				191ABE1125BD80D3002B548B /* ReviewListView.swift in Sources */,
 				191ABE7225BD8D81002B548B /* Review.swift in Sources */,
-				191ABE4E25BD8AFE002B548B /* HttpMethod.swift in Sources */,
+				B8366FEF25BDB8CB003B1027 /* AppStoreApi.swift in Sources */,
 				191ABE3325BD8357002B548B /* UIColor+Extensions.swift in Sources */,
 				191ABE1325BD80D3002B548B /* ReviewListViewModel.swift in Sources */,
 				19A065CB254565B600A5D545 /* SceneDelegate.swift in Sources */,

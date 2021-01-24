@@ -4,7 +4,7 @@ import UIKit
 private typealias ActionHandlers = LoadingHandler & ErrorHandler
 
 final class ReviewListViewController: UIViewController, ActionHandlers {
-    
+        
     // MARK: - Properties
     private lazy var viewSource = with(ReviewListView()) {
         $0.tableView.dataSource = self
@@ -56,7 +56,7 @@ extension ReviewListViewController: UITableViewDataSource {
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
-        let cell: ReviewListCell = tableView.dequeue(at: indexPath)
+        let cell: ReviewListCell = tableView.dequeueReusableCell(withIdentifier: ReviewListCell.cellId, for: indexPath) as! ReviewListCell
         if let review = input?.review(at: indexPath.row) {
             cell.populate(with: review)
         }

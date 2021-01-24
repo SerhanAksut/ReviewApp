@@ -16,7 +16,7 @@ protocol ReviewListViewModelOutput: AnyObject {
 final class ReviewListViewModel {
     
     // MARK: - Properties
-    private let apiClient: APIClient
+    private let network: AppStoreApi
     weak var output: ReviewListViewModelOutput?
     private var allReviews: [Review] = []
     
@@ -27,8 +27,8 @@ final class ReviewListViewModel {
     }
     
     // MARK: - Initialization
-    init(apiClient: APIClient) {
-        self.apiClient = apiClient
+    init(network: AppStoreApi) {
+        self.network = network
     }
 }
 
@@ -36,14 +36,15 @@ final class ReviewListViewModel {
 extension ReviewListViewModel: ReviewListViewModelInput {
     func loadReviewList() {
         state = .loading
-        apiClient.reviewList { [weak self] result in
+                
+        network.fetchReviewList() { [weak self] (result) in
             guard let self = self else { return }
             switch result {
             case .success(let reviews):
                 self.allReviews = reviews
                 self.state = .loaded(reviews)
             case .failure(let error):
-                self.state = .error(error.message)
+                self.state = .error(error.localizedDescription)
             }
         }
     }

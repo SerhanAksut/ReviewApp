@@ -12,7 +12,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         window?.backgroundColor = .appWhiteColor
-        let viewModel = ReviewListViewModel(apiClient: .live)
+        let viewModel = ReviewListViewModel(network: AppStoreApi())
         let controller = ReviewListViewController(viewModel: viewModel)
         let navigationController = UINavigationController(rootViewController: controller)
         navigationController.navigationBar.barTintColor = .appWhiteColor

@@ -4,6 +4,8 @@ import UIKit
 final class ReviewListCell: UITableViewCell {
     
     // MARK: - Properties
+    static let cellId = "ReviewListCellid"
+    
     private let ratingVersionLabel = makeLabel(font: .systemFont(ofSize: 18))
     private let authorLabel = makeLabel(font: .systemFont(ofSize: 15))
     

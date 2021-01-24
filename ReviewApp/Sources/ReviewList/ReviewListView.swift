@@ -8,7 +8,7 @@ final class ReviewListView: UIView {
         $0.estimatedRowHeight = 160
         $0.register(
             ReviewListCell.self,
-            forCellReuseIdentifier: ReviewListCell.identifier
+            forCellReuseIdentifier: ReviewListCell.cellId
         )
         $0.tableFooterView = UIView()
         $0.translatesAutoresizingMaskIntoConstraints = false
