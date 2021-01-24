@@ -80,7 +80,7 @@ extension ReviewListViewController: ReviewListViewModelOutput {
         removeLoading()
     }
     
-    func reloadUI(tags: [String], reviews: [Review]) {
+    func reloadUI() {
         viewSource.tableView.reloadData()
     }
     

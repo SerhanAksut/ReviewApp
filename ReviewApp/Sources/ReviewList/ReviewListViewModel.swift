@@ -9,7 +9,7 @@ protocol ReviewListViewModelInput {
 protocol ReviewListViewModelOutput: AnyObject {
     func displayLoading()
     func hideLoading()
-    func reloadUI(tags: [String], reviews: [Review])
+    func reloadUI()
     func displayError(title: String, message: String, buttonTitle: String)
 }
 
@@ -65,8 +65,8 @@ private extension ReviewListViewModel {
             break
         case .loading:
             output?.displayLoading()
-        case .loaded(let reviews):
-            output?.reloadUI(tags: [], reviews: reviews)
+        case .loaded:
+            output?.reloadUI()
             output?.hideLoading()
         case .error(let message):
             output?.hideLoading()
@@ -89,12 +89,10 @@ private extension ReviewListViewModel {
         case error(String)
         
         var reviews: [Review] {
-            switch self {
-            case .loaded(let reviews):
-                return reviews
-            default:
-                return []
+            if case .loaded(let reviewList) = self {
+                return reviewList
             }
+            return []
         }
     }
 }

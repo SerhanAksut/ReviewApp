@@ -5,7 +5,6 @@ final class ReviewListView: UIView {
     
     // MARK: - Properties
     let tableView = with(UITableView(frame: .zero, style: .plain)) {
-        $0.rowHeight = UITableView.automaticDimension
         $0.estimatedRowHeight = 160
         $0.register(
             ReviewListCell.self,

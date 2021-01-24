@@ -29,36 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ReviewListTests"
-               BuildableName = "ReviewListTests"
-               BlueprintName = "ReviewListTests"
-               ReferencedContainer = "container:Packages/Screens/ReviewList">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ReviewDetailTests"
-               BuildableName = "ReviewDetailTests"
-               BlueprintName = "ReviewDetailTests"
-               ReferencedContainer = "container:Packages/Screens/ReviewDetail">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FilterOptionsTests"
-               BuildableName = "FilterOptionsTests"
-               BlueprintName = "FilterOptionsTests"
-               ReferencedContainer = "container:Packages/Screens/FilterOptions">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
