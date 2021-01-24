@@ -1,11 +1,10 @@
 
 import UIKit
 import UIKitHelper
+import AppstoreAPILive
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
-    
-    let reviewListCoordinator = ReviewListCoordinator()
     
     func scene(
         _ scene: UIScene,
@@ -13,11 +12,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         options connectionOptions: UIScene.ConnectionOptions
     ) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let window = UIWindow(windowScene: windowScene)
-        window.backgroundColor = .appWhiteColor
-        window.makeKeyAndVisible()
-        reviewListCoordinator.start(window: window)
-        
-        self.window = window
+        window = UIWindow(windowScene: windowScene)
+        window?.backgroundColor = .appWhiteColor
+        let viewModel = ReviewListViewModel(apiClient: .live)
+        let controller = ReviewListViewController(viewModel: viewModel)
+        let navigationController = UINavigationController(rootViewController: controller)
+        navigationController.navigationBar.barTintColor = .appWhiteColor
+        navigationController.navigationBar.isTranslucent = false
+        navigationController.navigationBar.tintColor = .appBlackColor
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
     }
 }

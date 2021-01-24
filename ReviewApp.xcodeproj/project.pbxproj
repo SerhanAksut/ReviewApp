@@ -7,40 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		191ABE1125BD80D3002B548B /* ReviewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE0A25BD80D3002B548B /* ReviewListView.swift */; };
+		191ABE1225BD80D3002B548B /* ReviewListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE0B25BD80D3002B548B /* ReviewListCell.swift */; };
+		191ABE1325BD80D3002B548B /* ReviewListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE0C25BD80D3002B548B /* ReviewListViewModel.swift */; };
+		191ABE1525BD80D3002B548B /* ReviewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE0E25BD80D3002B548B /* ReviewListViewController.swift */; };
+		191ABE2C25BD830D002B548B /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE2825BD830D002B548B /* ErrorHandler.swift */; };
+		191ABE2D25BD830D002B548B /* LoadingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE2925BD830D002B548B /* LoadingHandler.swift */; };
+		191ABE2E25BD830D002B548B /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE2A25BD830D002B548B /* With.swift */; };
+		191ABE2F25BD830D002B548B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE2B25BD830D002B548B /* LoadingView.swift */; };
+		191ABE3325BD8357002B548B /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE3225BD8357002B548B /* UIColor+Extensions.swift */; };
+		191ABE3725BD8381002B548B /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE3625BD8381002B548B /* UITableView+Extensions.swift */; };
+		191ABE3A25BD83E7002B548B /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191ABE3925BD83E7002B548B /* UIView+Extensions.swift */; };
 		194234E72546DCCE0041016F /* SwiftKit in Frameworks */ = {isa = PBXBuildFile; productRef = 194234E62546DCCE0041016F /* SwiftKit */; };
 		197F3D5125481896006EE08B /* Entities in Frameworks */ = {isa = PBXBuildFile; productRef = 197F3D5025481896006EE08B /* Entities */; };
 		19A065CB254565B600A5D545 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A065CA254565B600A5D545 /* SceneDelegate.swift */; };
-		19B8AF4B25485E2E007038B4 /* FilterOptions in Frameworks */ = {isa = PBXBuildFile; productRef = 19B8AF4A25485E2E007038B4 /* FilterOptions */; };
 		19CA3BAE2542E3D000BBF912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CA3BAD2542E3D000BBF912 /* AppDelegate.swift */; };
 		19CA3BB72542E3D000BBF912 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19CA3BB62542E3D000BBF912 /* Assets.xcassets */; };
 		19CA3BBA2542E3D000BBF912 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CA3BB82542E3D000BBF912 /* LaunchScreen.storyboard */; };
-		19CE279A254762DA0043F749 /* ReviewDetail in Frameworks */ = {isa = PBXBuildFile; productRef = 19CE2799254762DA0043F749 /* ReviewDetail */; };
-		19DC6EE525439BCC000F84AA /* ReviewListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC6EE425439BCC000F84AA /* ReviewListCoordinator.swift */; };
 		19E66D93254422B900346353 /* AppstoreAPILive in Frameworks */ = {isa = PBXBuildFile; productRef = 19E66D92254422B900346353 /* AppstoreAPILive */; };
 		19E66D95254422B900346353 /* Coordinators in Frameworks */ = {isa = PBXBuildFile; productRef = 19E66D94254422B900346353 /* Coordinators */; };
-		19E66D97254422B900346353 /* ReviewList in Frameworks */ = {isa = PBXBuildFile; productRef = 19E66D96254422B900346353 /* ReviewList */; };
-		19E66D99254422B900346353 /* UIKitHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 19E66D98254422B900346353 /* UIKitHelper */; };
-		19E66D9B254422B900346353 /* UIKitPreview in Frameworks */ = {isa = PBXBuildFile; productRef = 19E66D9A254422B900346353 /* UIKitPreview */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		191ABE0A25BD80D3002B548B /* ReviewListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewListView.swift; sourceTree = "<group>"; };
+		191ABE0B25BD80D3002B548B /* ReviewListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewListCell.swift; sourceTree = "<group>"; };
+		191ABE0C25BD80D3002B548B /* ReviewListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewListViewModel.swift; sourceTree = "<group>"; };
+		191ABE0E25BD80D3002B548B /* ReviewListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewListViewController.swift; sourceTree = "<group>"; };
+		191ABE2825BD830D002B548B /* ErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		191ABE2925BD830D002B548B /* LoadingHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingHandler.swift; sourceTree = "<group>"; };
+		191ABE2A25BD830D002B548B /* With.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = With.swift; sourceTree = "<group>"; };
+		191ABE2B25BD830D002B548B /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		191ABE3225BD8357002B548B /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		191ABE3625BD8381002B548B /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		191ABE3925BD83E7002B548B /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		194234E42546DC870041016F /* SwiftKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SwiftKit; sourceTree = "<group>"; };
 		197F3D4825480CD6006EE08B /* Entities */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Entities; sourceTree = "<group>"; };
 		19A065CA254565B600A5D545 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		19B8AF4825485DF7007038B4 /* FilterOptions */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FilterOptions; sourceTree = "<group>"; };
 		19CA3BAA2542E3D000BBF912 /* ReviewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReviewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19CA3BAD2542E3D000BBF912 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19CA3BB62542E3D000BBF912 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19CA3BB92542E3D000BBF912 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19CA3BBB2542E3D000BBF912 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19CA3BD62542EABA00BBF912 /* Coordinators */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Coordinators; sourceTree = "<group>"; };
-		19CE2797254762A70043F749 /* ReviewDetail */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReviewDetail; sourceTree = "<group>"; };
 		19DC6EC02543006B000F84AA /* NetworkCore */ = {isa = PBXFileReference; lastKnownFileType = folder; path = NetworkCore; sourceTree = "<group>"; };
 		19DC6EC325430203000F84AA /* AppstoreAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppstoreAPI; sourceTree = "<group>"; };
-		19DC6EC62543060C000F84AA /* ReviewList */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReviewList; sourceTree = "<group>"; };
-		19DC6EE425439BCC000F84AA /* ReviewListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListCoordinator.swift; sourceTree = "<group>"; };
-		19DC6EE825439F3F000F84AA /* UIKitHelper */ = {isa = PBXFileReference; lastKnownFileType = folder; path = UIKitHelper; sourceTree = "<group>"; };
-		19E66D882544208A00346353 /* UIKitPreview */ = {isa = PBXFileReference; lastKnownFileType = folder; path = UIKitPreview; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,13 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19E66D97254422B900346353 /* ReviewList in Frameworks */,
-				19CE279A254762DA0043F749 /* ReviewDetail in Frameworks */,
-				19E66D99254422B900346353 /* UIKitHelper in Frameworks */,
 				19E66D93254422B900346353 /* AppstoreAPILive in Frameworks */,
 				197F3D5125481896006EE08B /* Entities in Frameworks */,
-				19E66D9B254422B900346353 /* UIKitPreview in Frameworks */,
-				19B8AF4B25485E2E007038B4 /* FilterOptions in Frameworks */,
 				194234E72546DCCE0041016F /* SwiftKit in Frameworks */,
 				19E66D95254422B900346353 /* Coordinators in Frameworks */,
 			);
@@ -63,6 +68,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		191ABE0625BD807B002B548B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				191ABE0725BD8099002B548B /* ReviewList */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		191ABE0725BD8099002B548B /* ReviewList */ = {
+			isa = PBXGroup;
+			children = (
+				191ABE0B25BD80D3002B548B /* ReviewListCell.swift */,
+				191ABE0A25BD80D3002B548B /* ReviewListView.swift */,
+				191ABE0E25BD80D3002B548B /* ReviewListViewController.swift */,
+				191ABE0C25BD80D3002B548B /* ReviewListViewModel.swift */,
+			);
+			path = ReviewList;
+			sourceTree = "<group>";
+		};
+		191ABE2725BD82DF002B548B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				191ABE2825BD830D002B548B /* ErrorHandler.swift */,
+				191ABE2925BD830D002B548B /* LoadingHandler.swift */,
+				191ABE2B25BD830D002B548B /* LoadingView.swift */,
+				191ABE2A25BD830D002B548B /* With.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		191ABE3125BD833E002B548B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				191ABE3225BD8357002B548B /* UIColor+Extensions.swift */,
+				191ABE3625BD8381002B548B /* UITableView+Extensions.swift */,
+				191ABE3925BD83E7002B548B /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		19A065CF2545696200A5D545 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,9 +140,11 @@
 			children = (
 				19A065CF2545696200A5D545 /* App */,
 				19CA3BB62542E3D000BBF912 /* Assets.xcassets */,
-				19DC6EE325439B94000F84AA /* Coordinators */,
+				191ABE3125BD833E002B548B /* Extensions */,
+				191ABE2725BD82DF002B548B /* Helpers */,
 				19CA3BBB2542E3D000BBF912 /* Info.plist */,
 				19CA3BB82542E3D000BBF912 /* LaunchScreen.storyboard */,
+				191ABE0625BD807B002B548B /* Sources */,
 			);
 			path = ReviewApp;
 			sourceTree = "<group>";
@@ -105,7 +152,6 @@
 		19CA3BC42542E5C000BBF912 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				19DC6EC5254305E9000F84AA /* Screens */,
 				19CA3BCE2542E9E800BBF912 /* Common */,
 			);
 			path = Packages;
@@ -126,28 +172,8 @@
 				197F3D4825480CD6006EE08B /* Entities */,
 				19DC6EC02543006B000F84AA /* NetworkCore */,
 				194234E42546DC870041016F /* SwiftKit */,
-				19DC6EE825439F3F000F84AA /* UIKitHelper */,
-				19E66D882544208A00346353 /* UIKitPreview */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		19DC6EC5254305E9000F84AA /* Screens */ = {
-			isa = PBXGroup;
-			children = (
-				19B8AF4825485DF7007038B4 /* FilterOptions */,
-				19CE2797254762A70043F749 /* ReviewDetail */,
-				19DC6EC62543060C000F84AA /* ReviewList */,
-			);
-			path = Screens;
-			sourceTree = "<group>";
-		};
-		19DC6EE325439B94000F84AA /* Coordinators */ = {
-			isa = PBXGroup;
-			children = (
-				19DC6EE425439BCC000F84AA /* ReviewListCoordinator.swift */,
-			);
-			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,13 +195,8 @@
 			packageProductDependencies = (
 				19E66D92254422B900346353 /* AppstoreAPILive */,
 				19E66D94254422B900346353 /* Coordinators */,
-				19E66D96254422B900346353 /* ReviewList */,
-				19E66D98254422B900346353 /* UIKitHelper */,
-				19E66D9A254422B900346353 /* UIKitPreview */,
 				194234E62546DCCE0041016F /* SwiftKit */,
-				19CE2799254762DA0043F749 /* ReviewDetail */,
 				197F3D5025481896006EE08B /* Entities */,
-				19B8AF4A25485E2E007038B4 /* FilterOptions */,
 			);
 			productName = ReviewApp;
 			productReference = 19CA3BAA2542E3D000BBF912 /* ReviewApp.app */;
@@ -230,8 +251,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19DC6EE525439BCC000F84AA /* ReviewListCoordinator.swift in Sources */,
+				191ABE3725BD8381002B548B /* UITableView+Extensions.swift in Sources */,
+				191ABE2E25BD830D002B548B /* With.swift in Sources */,
+				191ABE2D25BD830D002B548B /* LoadingHandler.swift in Sources */,
+				191ABE2C25BD830D002B548B /* ErrorHandler.swift in Sources */,
+				191ABE2F25BD830D002B548B /* LoadingView.swift in Sources */,
+				191ABE3A25BD83E7002B548B /* UIView+Extensions.swift in Sources */,
+				191ABE1225BD80D3002B548B /* ReviewListCell.swift in Sources */,
 				19CA3BAE2542E3D000BBF912 /* AppDelegate.swift in Sources */,
+				191ABE1525BD80D3002B548B /* ReviewListViewController.swift in Sources */,
+				191ABE1125BD80D3002B548B /* ReviewListView.swift in Sources */,
+				191ABE3325BD8357002B548B /* UIColor+Extensions.swift in Sources */,
+				191ABE1325BD80D3002B548B /* ReviewListViewModel.swift in Sources */,
 				19A065CB254565B600A5D545 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,14 +469,6 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = Entities;
 		};
-		19B8AF4A25485E2E007038B4 /* FilterOptions */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = FilterOptions;
-		};
-		19CE2799254762DA0043F749 /* ReviewDetail */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ReviewDetail;
-		};
 		19E66D92254422B900346353 /* AppstoreAPILive */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppstoreAPILive;
@@ -453,18 +476,6 @@
 		19E66D94254422B900346353 /* Coordinators */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Coordinators;
-		};
-		19E66D96254422B900346353 /* ReviewList */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ReviewList;
-		};
-		19E66D98254422B900346353 /* UIKitHelper */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = UIKitHelper;
-		};
-		19E66D9A254422B900346353 /* UIKitPreview */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = UIKitPreview;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
