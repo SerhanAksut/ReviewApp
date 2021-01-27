@@ -59,6 +59,7 @@ extension ReviewListViewController: UITableViewDataSource {
         let cell: ReviewListCell = tableView.dequeueReusableCell(withIdentifier: ReviewListCell.cellId, for: indexPath) as! ReviewListCell
         if let review = input?.review(at: indexPath.row) {
             cell.populate(with: review)
+            cell.setupAccessibility(with: review)
         }
         return cell
     }

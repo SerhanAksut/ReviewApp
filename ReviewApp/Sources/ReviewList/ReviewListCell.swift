@@ -76,3 +76,11 @@ private func makeLabel(
         $0.setContentCompressionResistancePriority(.required, for: .vertical)
     }
 }
+
+// MARK: - Accessibility
+extension ReviewListCell {
+    func setupAccessibility(with review: Review) {
+        isAccessibilityElement = true
+        accessibilityLabel = "\(review.author) tarafından, \(review.version) sürümünde yapılan, \(review.rating) yıldızlı yorum. \(review.title), \(review.content)"
+    }
+}
