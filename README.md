@@ -1,5 +1,5 @@
 # ReviewApp
- ING Bank case challenge iOS app
+YTU Education iOS App
 
 ## Table of contents
 * [General info](#general-info)
@@ -11,7 +11,7 @@
 * [Setup](#setup)
 
 ## General info
-This is an iOS Project using `UIKit` for ING Bank mobile team. It is a three pages application which lists reviews, filters reviews and displays detailed information about selected review. The first one is that ReviewList page contains a `UITableView` to display reviews. The second one is that FilterOptions page contains a vertical `UIStackView` to display filtering options and the last one is that ReviewDetail page contains a `UIScrollView` and vertial `UIStackView` to display detailed information.
+This is an iOS Project using `UIKit` for YTU community. It is a three pages application which lists reviews, filters reviews and displays detailed information about selected review. The first one is that ReviewList page contains a `UITableView` to display reviews. The second one is that FilterOptions page contains a vertical `UIStackView` to display filtering options and the last one is that ReviewDetail page contains a `UIScrollView` and vertial `UIStackView` to display detailed information.
 
 ## Requirements
 iOS13+
@@ -78,4 +78,4 @@ There is no third party dependency in the app.
 	
 ## Setup
 There is no dependency to wait for installation. <br />
-The project was developed by using Xcode Version 12.1 (12A7403).
+The project was developed by using Xcode Version 12.4 (12A7403).
