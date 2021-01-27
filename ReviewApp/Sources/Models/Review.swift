@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Review: Equatable {
+struct Review: Equatable, Identifiable {
     let id: String
     let author: String
     let rating: UInt
