@@ -1,5 +1,5 @@
 # ReviewApp
-YTU Community Presentation iOS App
+Modular Architecture demo iOS App
 
 ## Table of contents
 * [General info](#general-info)
@@ -11,7 +11,7 @@ YTU Community Presentation iOS App
 * [Setup](#setup)
 
 ## General info
-This is an iOS Project using `UIKit` for YTU community. It is a three pages application which lists reviews, filters reviews and displays detailed information about selected review. The first one is that ReviewList page contains a `UITableView` to display reviews. The second one is that FilterOptions page contains a vertical `UIStackView` to display filtering options and the last one is that ReviewDetail page contains a `UIScrollView` and vertial `UIStackView` to display detailed information.
+This is an iOS Project using `UIKit` for Modular Architecture demo app. It is a three pages application which lists reviews, filters reviews and displays detailed information about selected review. The first one is that ReviewList page contains a `UITableView` to display reviews. The second one is that FilterOptions page contains a vertical `UIStackView` to display filtering options and the last one is that ReviewDetail page contains a `UIScrollView` and vertial `UIStackView` to display detailed information.
 
 ## Requirements
 iOS13+
