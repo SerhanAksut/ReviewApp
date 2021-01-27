@@ -78,4 +78,4 @@ There is no third party dependency in the app.
 	
 ## Setup
 There is no dependency to wait for installation. <br />
-The project was developed by using Xcode Version 12.4 (12A7403).
+The project was developed by using Xcode Version 12.4 (12D4e).
