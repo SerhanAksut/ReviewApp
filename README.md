@@ -16,7 +16,7 @@ This is an iOS Project using `UIKit` for YTU community. It is a three pages appl
 ## Requirements
 iOS13+
 <br />
-`Note:` I had to set minimum target iOS 13. Because, UIViewControllerRepresentable protocol requires minimum target as iOS 13 in UIKitPreview package.
+`Note:` I had to set minimum target iOS 13. Because, `UIViewControllerRepresentable` protocol requires minimum target as iOS 13 in UIKitPreview package.
 
 ## Design Pattern
 MVVM is used to make the project more readable and easily testable. One of the biggest advantage of MVVM design pattern is that it seperates business and UI logics. Besides, the slight difference between commonly known MVVM and the one used in this project is using IO(Input/Output) mechanism as protocols for view models.
