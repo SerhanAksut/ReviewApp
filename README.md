@@ -1,5 +1,5 @@
 # ReviewApp
-YTU Education iOS App
+YTU Community Presentation iOS App
 
 ## Table of contents
 * [General info](#general-info)
