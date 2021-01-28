@@ -3,11 +3,11 @@ import Foundation
 
 class AppStoreApi {
     
-    static let url = URL(string: "https://itunes.apple.com/tr/rss/customerreviews/id=375380948/sortby=mostrecent/json")
+    let url: URL? = URL(string: "https://itunes.apple.com/tr/rss/customerreviews/id=375380948/sortby=mostrecent/json")
     
     func fetchReviewList(completion: @escaping (Result<[Review], Error>) -> () ) {
         
-        guard let _url = AppStoreApi.url else { return }
+        guard let _url = url else { return }
         
         let task = URLSession.shared.dataTask(with: _url) { (data, _, error) in
             

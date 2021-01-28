@@ -18,7 +18,6 @@ final class ReviewListViewModel {
     // MARK: - Properties
     private let network: AppStoreApi
     weak var output: ReviewListViewModelOutput?
-    private var allReviews: [Review] = []
     
     private var state: State = .idle {
         didSet {
@@ -34,6 +33,7 @@ final class ReviewListViewModel {
 
 // MARK: - ReviewListViewModel Inputs
 extension ReviewListViewModel: ReviewListViewModelInput {
+    
     func loadReviewList() {
         state = .loading
                 
@@ -41,7 +41,6 @@ extension ReviewListViewModel: ReviewListViewModelInput {
             guard let self = self else { return }
             switch result {
             case .success(let reviews):
-                self.allReviews = reviews
                 self.state = .loaded(reviews)
             case .failure(let error):
                 self.state = .error(error.localizedDescription)
